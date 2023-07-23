@@ -104,6 +104,11 @@ async function main() {
 			d3.select(this).transition().ease(d3.easeSin).duration(400).attr("width", node_width);
 			d3.selectAll('.tooltip-name')
 			.style('display', 'none');		
+		})
+		.on("touchcancel",  function (event, d) {
+			// Get Position of Mouse/Node for Tooltip //
+			d3.selectAll('.tooltip-name')
+			.style('display', 'none');		
 		});
 
 		
