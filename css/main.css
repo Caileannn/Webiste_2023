@@ -230,6 +230,8 @@ p {
 	margin-left: 10px;
 	cursor: pointer;
 	color: yellow;
+	width: 20px;
+	height: auto;
 }
 
 a{
