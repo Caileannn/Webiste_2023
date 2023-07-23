@@ -96,6 +96,11 @@ async function main() {
 			.transition()
 			.style('top', pos.top + 'px')
 			.style('left', pos.left + 'px');
+		})
+		.on("pointerup", function (event, d) {
+			d3.select(this).transition().ease(d3.easeSin).duration(400).attr("width", node_width);
+			d3.selectAll('.tooltip-name')
+			.style('display', 'none');
 		});
 
 		
