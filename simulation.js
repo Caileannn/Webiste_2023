@@ -53,12 +53,14 @@ async function main() {
         .on("mouseleave", function (d) {
 			d3.select(this).transition().ease(d3.easeSin).duration(400).attr("width", node_width);
 			d3.selectAll('.tooltip-name')
+			.text(d.title)
 			.style('display', 'none');
         })
 		.on("click", function (event, d) {
 			project_open = true;
 
 			d3.selectAll('.tooltip-name')
+			.text(d.title)
 			.style('display', 'none');
 
 			var move_to_selection = document.getElementById('slider-cont')
@@ -78,7 +80,7 @@ async function main() {
 			// Get Position of Mouse/Node for Tooltip //
 			let pos = d3.select(this).node().getBoundingClientRect();
 			d3.select('.tooltip-name')
-			// .transition()
+			.text(d.title)
 			.style('top', pos.top + 'px')
 			.style('left', pos.left + 'px');			
 		})
@@ -87,7 +89,6 @@ async function main() {
 			let pos = d3.select(this).node().getBoundingClientRect();
 			d3.select('.tooltip-name')
 			.text(d.title)
-			// .transition()
 			.style('display', 'block')
 			d3.select(this).transition().ease(d3.easeSin).duration(400).attr("width", node_width * 3)			
 		})
@@ -95,7 +96,7 @@ async function main() {
 			// Get Position of Mouse/Node for Tooltip //
 			let pos = d3.select(this).node().getBoundingClientRect();
 			d3.select('.tooltip-name')
-			// .text(d.title)
+			.text(d.title)
 			.transition()
 			.style('top', pos.top + 'px')
 			.style('left', pos.left + 'px');
