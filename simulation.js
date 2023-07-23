@@ -45,7 +45,10 @@ async function main() {
 		})
 		.attr("class", "node-gif")
 		.on("mouseenter", function (d) {
-			d3.select(this).transition().ease(d3.easeSin).duration(400).attr("width", node_width * 3)
+			d3.select(this).transition().ease(d3.easeSin).duration(400).attr("width", node_width * 3);
+			d3.select('.tooltip-name')
+			.text(d.title)
+			.style('display', 'block')
         })
         .on("mouseleave", function (d) {
 			d3.select(this).transition().ease(d3.easeSin).duration(400).attr("width", node_width);
@@ -72,43 +75,27 @@ async function main() {
 			// Get Position of Mouse/Node for Tooltip //
 			let pos = d3.select(this).node().getBoundingClientRect();
 			d3.select('.tooltip-name')
-			.text(d.title)
 			.transition()
-			.style('display', 'block')
 			.style('top', pos.top + 'px')
 			.style('left', pos.left + 'px');			
 		})
-		.on("touchstart",  function (event, d) {
+		.on("pointerdown",  function (event, d) {
 			// Get Position of Mouse/Node for Tooltip //
 			let pos = d3.select(this).node().getBoundingClientRect();
 			d3.select('.tooltip-name')
 			.text(d.title)
 			.transition()
 			.style('display', 'block')
-			.style('top', pos.top + 'px')
-			.style('left', pos.left + 'px');
 			d3.select(this).transition().ease(d3.easeSin).duration(400).attr("width", node_width * 3)			
 		})
-		.on("touchmove",  function (event, d) {
+		.on("pointermove",  function (event, d) {
 			// Get Position of Mouse/Node for Tooltip //
 			let pos = d3.select(this).node().getBoundingClientRect();
 			d3.select('.tooltip-name')
 			.text(d.title)
 			.transition()
-			.style('display', 'block')
 			.style('top', pos.top + 'px')
 			.style('left', pos.left + 'px');
-		})
-		.on("touchend",  function (event, d) {
-			// Get Position of Mouse/Node for Tooltip //
-			d3.select(this).transition().ease(d3.easeSin).duration(400).attr("width", node_width);
-			d3.selectAll('.tooltip-name')
-			.style('display', 'none');		
-		})
-		.on("touchcancel",  function (event, d) {
-			// Get Position of Mouse/Node for Tooltip //
-			d3.selectAll('.tooltip-name')
-			.style('display', 'none');		
 		});
 
 		
