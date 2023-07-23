@@ -58,6 +58,9 @@ async function main() {
 		.on("click", function (event, d) {
 			project_open = true;
 
+			d3.selectAll('.tooltip-name')
+			.style('display', 'none');
+
 			var move_to_selection = document.getElementById('slider-cont')
 			move_to_selection.classList.add('notransition'); // Disable transitions
 			move_to_selection.style.transform = 'translate('+(d.section * -50)+'%)'
