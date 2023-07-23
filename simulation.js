@@ -78,7 +78,7 @@ async function main() {
 			.style('top', pos.top + 'px')
 			.style('left', pos.left + 'px');			
 		})
-		.on("pointerdown",  function (event, d) {
+		.on("touchstart",  function (event, d) {
 			// Get Position of Mouse/Node for Tooltip //
 			let pos = d3.select(this).node().getBoundingClientRect();
 			d3.select('.tooltip-name')
@@ -89,7 +89,7 @@ async function main() {
 			.style('left', pos.left + 'px');
 			d3.select(this).transition().ease(d3.easeSin).duration(400).attr("width", node_width * 3)			
 		})
-		.on("pointermove",  function (event, d) {
+		.on("touchmove",  function (event, d) {
 			// Get Position of Mouse/Node for Tooltip //
 			let pos = d3.select(this).node().getBoundingClientRect();
 			d3.select('.tooltip-name')
@@ -99,7 +99,7 @@ async function main() {
 			.style('top', pos.top + 'px')
 			.style('left', pos.left + 'px');
 		})
-		.on("pointerup",  function (event, d) {
+		.on("touchend",  function (event, d) {
 			// Get Position of Mouse/Node for Tooltip //
 			d3.select(this).transition().ease(d3.easeSin).duration(400).attr("width", node_width);
 			d3.selectAll('.tooltip-name')
