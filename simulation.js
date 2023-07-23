@@ -78,7 +78,7 @@ async function main() {
 			// Get Position of Mouse/Node for Tooltip //
 			let pos = d3.select(this).node().getBoundingClientRect();
 			d3.select('.tooltip-name')
-			.transition()
+			// .transition()
 			.style('top', pos.top + 'px')
 			.style('left', pos.left + 'px');			
 		})
