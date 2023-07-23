@@ -87,7 +87,7 @@ async function main() {
 			let pos = d3.select(this).node().getBoundingClientRect();
 			d3.select('.tooltip-name')
 			.text(d.title)
-			.transition()
+			// .transition()
 			.style('display', 'block')
 			d3.select(this).transition().ease(d3.easeSin).duration(400).attr("width", node_width * 3)			
 		})
@@ -95,7 +95,7 @@ async function main() {
 			// Get Position of Mouse/Node for Tooltip //
 			let pos = d3.select(this).node().getBoundingClientRect();
 			d3.select('.tooltip-name')
-			.text(d.title)
+			// .text(d.title)
 			.transition()
 			.style('top', pos.top + 'px')
 			.style('left', pos.left + 'px');
