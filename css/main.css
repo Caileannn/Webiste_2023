@@ -551,6 +551,10 @@ a{
 		padding-left: 20px;
 		padding-right: 20px;
 	}
+
+	.text-body-image {
+		max-width: 100%;
+	}
 }
 
 @media screen and (max-width: 600px) {
