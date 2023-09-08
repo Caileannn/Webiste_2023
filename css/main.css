@@ -365,12 +365,12 @@ a{
 }
 
 .text-body-image {
-	border-radius: 20px;
-	max-width: 80%; height: auto; 
+	border-radius: 0px;
+	max-width: 100%; height: auto; 
 }
 
 .video-frame {
-	height: 400px;
+	height: 500px;
     width: 100%;
     border: 0px black solid;
 }

@@ -121,7 +121,6 @@ function textToClipboard() {
 // Listen for Click -> Close Project Window If Open //
 addEventListener("click", (evt) => {
 	var class_name = evt.target.classList[0]
-	console.log(class_name)
 	if(class_name == "section" || class_name == "s-emoji" || class_name == null ){
 		if (project_open) {
 			smoothScrollTest()
