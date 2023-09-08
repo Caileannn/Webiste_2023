@@ -85,16 +85,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
 			slider_cont.style.transform = 'translate('+(sectionIndex * -50)+'%)'
 		})
 	})
-
-	// l_arrow.addEventListener("click", function () {
-	// 	console.log("L")
-	// 	// slider_cont.style.transform = 'translate(0%)'
-	// })
-	
-	// r_arrow.addEventListener("click", function () {
-	// 	console.log("R")
-	// 	// slider_cont.style.transform = 'translate(+50%)'
-	// })
 });
 
 

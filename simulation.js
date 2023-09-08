@@ -64,6 +64,7 @@ async function main() {
 			.style('display', 'none');
 
 			var move_to_selection = document.getElementById('slider-cont')
+			var nav_bar = document.getElementById('flex-cont-url')
 			move_to_selection.classList.add('notransition'); // Disable transitions
 			move_to_selection.style.transform = 'translate('+(d.section * -50)+'%)'
 			move_to_selection.offsetHeight; // Trigger a reflow, flushing the CSS changes
@@ -74,6 +75,10 @@ async function main() {
 			var element = document.getElementById("main-container");
 			element.style.animation = "blurin 1.5s ease-out"
 			element.style.filter = "blur(15px)"
+
+			nav_bar.style.animation = "fadeout 1.5s ease-out"
+			nav_bar.style.opacity = "0";
+			nav_bar.style.pointerEvents = "none"
 			document.getElementById("main-container").style.opacity = "0.2";
         })
 		.on("mouseover",  function (event, d) {
