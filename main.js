@@ -127,7 +127,9 @@ addEventListener("click", (evt) => {
 			var nav_bar = document.getElementById('flex-cont-url')
 			nav_bar.style.animation = "fadein 1.5s ease-out"
 			nav_bar.style.opacity = "1";
-			nav_bar.style.pointerEvents = "auto"
+			setTimeout(() => {
+				nav_bar.style.pointerEvents = "auto"
+			}, 1500);
 		}
 	}
 });
@@ -141,7 +143,10 @@ addEventListener("touchstart", (evt) => {
 			var nav_bar = document.getElementById('flex-cont-url')
 			nav_bar.style.animation = "fadein 1.5s ease-out"
 			nav_bar.style.opacity = "1";
-			nav_bar.style.pointerEvents = "auto"
+			setTimeout(() => {
+				nav_bar.style.pointerEvents = "auto"
+			}, 1500);
+			
 		}
 	}
 });
