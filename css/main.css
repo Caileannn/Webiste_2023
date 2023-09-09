@@ -253,6 +253,7 @@ a{
 	font-size: 2rem;
 	font-weight: 400;
 	line-height: 3rem;
+	margin-bottom: 100px;
 }
 
 .patc-header {
@@ -556,6 +557,7 @@ a{
 
 	.parent-about-tc {
 		font-size: 1.5rem;
+		margin-top: 40px;	
 	}
 
 	.project-window {
