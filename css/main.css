@@ -213,13 +213,17 @@ p {
 	/* right:200px; */
 	/* width: calc(100vw - (200px + 20px)); */
 	width: 100%;
-	height: calc(100vh);
+	height: 100%;
 	opacity: 0;
 	padding-left: 250px;
 	padding-right: 150px;
 	overflow: scroll;
 	-ms-overflow-style: none;  /* IE and Edge */
 	scrollbar-width: none;  /* Firefox */
+	
+
+  margin-top: 60px;
+  padding-bottom: 40px;
 }
 
 .about-text-cont::-webkit-scrollbar {
@@ -264,7 +268,7 @@ a{
 }
 
 .patc-space {
-	height: 60px;
+	height: 10px;
 }
 
 #emoji-cont {
@@ -542,6 +546,12 @@ a{
 	.about-text-cont {
 		padding-left: 20px;
 		padding-right: 20px;
+		-webkit-mask: 
+			linear-gradient( to bottom,    transparent, black 100px) top, 
+			linear-gradient( to top, transparent, black 200px) bottom;
+		-webkit-mask-size: 100% 52%; /* each one half the size */
+		-webkit-mask-repeat:no-repeat;
+		mask-repeat:no-repeat;
 	}
 
 	.parent-about-tc {
