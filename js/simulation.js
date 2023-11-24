@@ -80,6 +80,10 @@ async function main() {
 			nav_bar.style.opacity = "0";
 			nav_bar.style.pointerEvents = "none"
 			document.getElementById("main-container").style.opacity = "0.2";
+
+			var element = document.getElementById("content-exit-container")
+			element.style.animation = "fadein 1.5s ease-out"
+			element.style.opacity = 1
         })
 		.on("mouseover",  function (event, d) {
 			// Get Position of Mouse/Node for Tooltip //

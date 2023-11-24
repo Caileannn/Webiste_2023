@@ -200,13 +200,15 @@ p {
 }
 
 #content-exit-container {
+	font-family: 'Redacted Reg';
 	position: absolute;
-	top: 20px;
-	right: 20px;
+	top: 25px;
+	right: 25px;
 	font-size: 3rem;
 	cursor: pointer;
 	z-index: 1000;
-	opacity: 100%;
+	opacity: 0%;
+	color: #0066FF;
 }
 
 #name-cont {
