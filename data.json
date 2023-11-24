@@ -2,7 +2,7 @@
     "nodes": [
         {
             "title": "(0)MACHINE, 2022",
-            "path": "./css/assets/test-4.gif",
+            "path": "./css/assets/imgs/test-4.gif",
 			"width": 200,
 			"height": 80,
 			"section": 0,
@@ -13,7 +13,7 @@
         },
         {
             "title": "(0)!MACHINE, 2022",
-            "path": "./css/assets/test-4.gif",
+            "path": "./css/assets/imgs/test-4.gif",
 			"width": 200,
 			"height": 80,
 			"section": 1,
