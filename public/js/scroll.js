@@ -56,39 +56,4 @@ function smoothScrollTest() {
 	});
 }
 
-/// Carousel Functions 🎠 ///
-
-
-// Variables //
-var sectionIndex = 0;
-var maxSections = 1;	
-
-// Event Listensers for Pointers (L/R)
-window.addEventListener("DOMContentLoaded", (event) => {
-    const l_arrow = document.querySelectorAll(".sl-arrow")
-	const r_arrow = document.querySelectorAll(".sr-arrow")
-	const slider_cont = document.getElementById("slider-cont")
-
-
-	l_arrow.forEach(arrow => {
-		arrow.addEventListener("click", function () {
-			sectionIndex -= 1
-			if(sectionIndex < 0){
-				sectionIndex = 0
-			}
-			slider_cont.style.transform = 'translate('+(sectionIndex * -50)+'%)'
-		})
-	})
-
-	r_arrow.forEach(arrow => {
-		arrow.addEventListener("click", function () {
-			sectionIndex += 1
-			if(sectionIndex > 1){
-				sectionIndex = 1
-			}
-			slider_cont.style.transform = 'translate('+(sectionIndex * -50)+'%)'
-		})
-	})
-});
-
 

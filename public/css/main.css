@@ -539,7 +539,7 @@ a{
 .flex-cont{
 	display: flex;
 	flex-direction: row;
-	width: 200%;
+	width: 300%;
 	transform: translate(0%);
 	transition: transform 1s ease-in-out;
 }
@@ -547,6 +547,10 @@ a{
 .flex-cont section {
 	flex-basis: 100%;
 	justify-content: center;
+}
+
+section {
+	width: 100%;
 }
 
 .node-gif {

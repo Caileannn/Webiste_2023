@@ -14,6 +14,7 @@ var project_open = false
 
 // JSON Data //
 let data;
+let maxSections
 
 /// HTML Elements ///
 
@@ -160,6 +161,37 @@ function openProjectFromIndex(section) {
 	element.style.opacity = 1
 }
 
+/// Carousel Functions 🎠 ///
+var sectionIndex = 0;
+
+// Event Listensers for Pointers (L/R)
+window.addEventListener("DOMContentLoaded", (event) => {
+    const l_arrow = document.querySelectorAll(".sl-arrow")
+	const r_arrow = document.querySelectorAll(".sr-arrow")
+	const slider_cont = document.getElementById("slider-cont")
+
+	l_arrow.forEach(arrow => {
+		arrow.addEventListener("click", function () {
+			sectionIndex -= 1
+			if(sectionIndex < 0){
+				sectionIndex = 0
+			}
+			slider_cont.style.transform = 'translate(' + (sectionIndex * -(100/maxSections)) + '%)'
+		})
+		
+	})
+
+	r_arrow.forEach(arrow => {
+		arrow.addEventListener("click", function () {
+			sectionIndex += 1
+			if(sectionIndex > maxSections-1){
+				sectionIndex = 1
+			}
+			slider_cont.style.transform = 'translate(' + (sectionIndex * -(100/maxSections)) + '%)'
+		})
+	})
+});
+
 // Listen for clik on exit, close project window if open //
 addEventListener("click", (evt) => {
 	if(evt.target == document.getElementById("content-exit-container")){
@@ -235,6 +267,9 @@ async function getJSON() {
 	let jsondata;    
 	const response = await fetch('./data.json');
 	jsondata = await response.json();
+	maxSections = (jsondata.nodes).length
+	carousel_cont = document.getElementById("slider-cont")
+	carousel_cont.style.width = maxSections * 100 + "%"
 	return jsondata
 }
 
