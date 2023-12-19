@@ -43,6 +43,10 @@ function smoothScrollTest() {
 			document.getElementById("main-container").style.animation = "fadeout-about 1.5s ease-out"
 			document.getElementById("main-container").style.filter = "blur(0px)"
 			document.getElementById("main-container").style.opacity = "0";
+		} else if (index) {
+			document.getElementById("main-container").style.animation = "fadeout-about 1.5s ease-out"
+			document.getElementById("main-container").style.filter = "blur(0px)"
+			document.getElementById("main-container").style.opacity = "0";
 		} else {
 			document.getElementById("main-container").style.animation = "blurout 1.5s ease-out"
 			document.getElementById("main-container").style.filter = "blur(0px)"
