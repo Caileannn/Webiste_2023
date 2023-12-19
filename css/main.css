@@ -16,7 +16,7 @@
 
 ::selection {
 	background: yellow;
-	color: #0066FF;
+	color: #ff0000;
   }
 
 html {
@@ -100,19 +100,49 @@ svg {
 		-moz-filter: blur(0px);
 		-o-filter: blur(0px); -ms-filter: blur(0px);
 		filter: blur(0px); opacity: 1.0;}
-	100% { -webkit-filter: blur(15px);
-		-moz-filter: blur(15px);
-		-o-filter: blur(15px); -ms-filter: blur(15px);
-		filter: blur(15px);
+	100% { -webkit-filter: blur(5px);
+		-moz-filter: blur(5px);
+		-o-filter: blur(5px); -ms-filter: blur(5px);
+		filter: blur(5px);
 		opacity: 0.2;
 		}
 }
+
+@-webkit-keyframes blurin-index {
+	0% { -webkit-filter: blur(0px);
+		-moz-filter: blur(0px);
+		-o-filter: blur(0px); -ms-filter: blur(0px);
+		filter: blur(0px); opacity: 1.0;}
+	100% { -webkit-filter: blur(5px);
+		-moz-filter: blur(5px);
+		-o-filter: blur(5px); -ms-filter: blur(5px);
+		filter: blur(5px);
+		opacity: 0.2;
+		}
+}
+
 
 @-webkit-keyframes blurout {
 	0% { -webkit-filter: blur(15px);
 		-moz-filter: blur(15px);
 		-o-filter: blur(15px); -ms-filter: blur(15px);
 		filter: blur(15px);
+		opacity: 0.2;
+	 }
+	100% { -webkit-filter: blur(0px);
+		-moz-filter: blur(0px);
+		-o-filter: blur(0px); -ms-filter: blur(0px);
+		filter: blur(0px); opacity: 1.0;
+	 }
+
+	
+}
+
+@-webkit-keyframes blurout-index {
+	0% { -webkit-filter: blur(10px);
+		-moz-filter: blur(10px);
+		-o-filter: blur(10px); -ms-filter: blur(10px);
+		filter: blur(10px);
 		opacity: 0.2;
 	 }
 	100% { -webkit-filter: blur(0px);
@@ -270,30 +300,39 @@ p {
 	opacity: 0;
 	padding-left: 250px;
 	padding-right: 150px;
-	overflow: scroll;
 	-ms-overflow-style: none;  /* IE and Edge */
 	scrollbar-width: none;  /* Firefox */
-	
+	text-wrap: wrap;
 
-  margin-top: 60px;
-  padding-bottom: 40px;
+	margin-top: 60px;
+	padding-bottom: 40px;
 }
 
 
 .index-list {
 	list-style-type: gujarati;
+	text-wrap: wrap;
+	display: flex;  
+	flex-direction: column;
+	
 }
 
 .index-list li {
 	cursor: pointer;
-	width: max-content;
 	
 }
 
 .index-list li:hover {
 	color: red;
-	text-decoration: red wavy underline;
+	text-decoration: yellow wavy underline;
 }
+
+.list-text {
+	font-family: 'Redacted Reg';
+	margin-top: 20px;
+	color: red;
+}
+
 .about-text-cont::-webkit-scrollbar {
 	display: none;
 }
@@ -569,6 +608,10 @@ a{
 	.parent-about-tc {
 		font-size: 1.7rem;
 	}
+
+	.parent-index-cont {
+		font-size: 1.7rem;
+	}
 }
 
 @media screen and (max-width: 1200px){
@@ -580,6 +623,10 @@ a{
 		font-size: 1.7rem;
 	}
 
+	.parent-index-cont {
+		font-size: 1.7rem;
+	}
+
 	.project-window {
 		width: 85%;
 	}
@@ -587,6 +634,11 @@ a{
 
 @media screen and (max-width: 1024px) {
 	.parent-about-tc {
+		font-size: 1.3rem;
+		line-height: 2rem;
+	}
+
+	.parent-index-cont {
 		font-size: 1.3rem;
 		line-height: 2rem;
 	}
@@ -639,9 +691,26 @@ a{
 		mask-repeat:no-repeat;
 	}
 
+	.index-text-cont {
+		padding-left: 20px;
+		padding-right: 20px;
+		-webkit-mask: 
+			linear-gradient( to bottom,    transparent, black 100px) top, 
+			linear-gradient( to top, transparent, black 200px) bottom;
+		-webkit-mask-size: 100% 52%; /* each one half the size */
+		-webkit-mask-repeat:no-repeat;
+		mask-repeat:no-repeat;
+	}
+
 	.parent-about-tc {
 		font-size: 1.5rem;
 		margin-top: 40px;	
+	}
+
+	.index-list {
+		font-size: 1.5rem;
+		margin-top: 40px;	
+		padding-left: 20px;
 	}
 
 	.project-window {
@@ -657,6 +726,10 @@ a{
 
 @media screen and (max-width: 600px) {
 	.parent-about-tc {
+		font-size: 1.5rem;
+	}
+
+	.index-list {
 		font-size: 1.5rem;
 	}
 
@@ -685,6 +758,10 @@ a{
 	}
 
 	.parent-about-tc {
+		font-size: 1.2rem;
+	}
+
+	.index-list {
 		font-size: 1.2rem;
 	}
 

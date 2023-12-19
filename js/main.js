@@ -115,7 +115,7 @@ function fadeOutPage(id) {
 		var index_cont = document.getElementById("index-text-cont")
 		index_cont.style.animation = "fadeout 2s ease-out"
 		index_cont.style.opacity = 0
-		index_cont.style.zIndex = 100
+		index_cont.style.zIndex = 0
 		index = false
 	}
 
@@ -123,7 +123,7 @@ function fadeOutPage(id) {
 		var about_cont = document.getElementById("about-text-cont")
 		about_cont.style.animation = "fadeout 2s ease-out"
 		about_cont.style.opacity = 0
-		about_cont.style.zIndex = 100
+		about_cont.style.zIndex = 0
 		about = false
 	}
 	
@@ -133,6 +133,31 @@ function textToClipboard() {
 	// Get the text field
 	var copyText = document.getElementById("email-text");
 	navigator.clipboard.writeText(copyText.innerText);
+}
+
+function openProjectFromIndex(section) {
+	project_open = true
+	var move_to_selection = document.getElementById('slider-cont')
+	var nav_bar = document.getElementById('flex-cont-url')
+	move_to_selection.classList.add('notransition'); // Disable transitions
+	move_to_selection.style.transform = 'translate('+(section * -50)+'%)'
+	move_to_selection.offsetHeight; // Trigger a reflow, flushing the CSS changes
+	move_to_selection.classList.remove('notransition'); // Re-enable transitions
+	
+	var element = document.getElementById("project-cont");
+	element.style.transform = "translate(0%, 0%)"
+	var element = document.getElementById("index-text-cont");
+	element.style.animation = "blurin-index 1.5s ease-out"
+	element.style.filter = "blur(5px)"
+
+	nav_bar.style.animation = "fadeout 1.5s ease-out"
+	nav_bar.style.opacity = "0";
+	nav_bar.style.pointerEvents = "none"
+	document.getElementById("index-text-cont").style.opacity = "0.2";
+
+	var element = document.getElementById("content-exit-container")
+	element.style.animation = "fadein 1.5s ease-out"
+	element.style.opacity = 1
 }
 
 // Listen for clik on exit, close project window if open //
@@ -150,6 +175,12 @@ addEventListener("click", (evt) => {
 				nav_bar.style.pointerEvents = "auto"
 				
 			}, 1500);
+			if (index) {
+				var element = document.getElementById("index-text-cont");
+				element.style.animation = "blurout-index 1.5s ease-out"
+				element.style.filter = "blur(0px)"
+				element.style.opacity = "1.0"
+			}
 		}
 	}
 })
