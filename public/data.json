@@ -2,39 +2,39 @@
   "nodes": [
     {
       "title": "(O)MACHINE1, 2023",
-      "path": "./assets/imgs/omachine/test-4.gif",
+      "path": "./assets/imgs/omachine/cover.gif",
       "width": 200,
       "height": 80,
       "section": "0",
       "tag": [
-        "AI",
-        "VIDEO"
+        "VIDEO",
+        "AI"
       ],
       "strength": 0.01,
       "subpage": "/o-machine.html"
     },
     {
       "title": "(O)MACHINE2, 2022",
-      "path": "./assets/imgs/omachine/test-4.gif",
+      "path": "./assets/imgs/omachine/cover.gif",
       "width": 200,
       "height": 80,
       "section": "1",
       "tag": [
-        "AI",
-        "VIDEO"
+        "VIDEO",
+        "AI"
       ],
       "strength": 0.01,
       "subpage": "/o-machine.html"
     },
     {
       "title": "(O)MACHINE3, 2023",
-      "path": "./assets/imgs/omachine/test-4.gif",
+      "path": "./assets/imgs/omachine/cover.gif",
       "width": 200,
       "height": 80,
       "section": "2",
       "tag": [
-        "AI",
-        "VIDEO"
+        "VIDEO",
+        "AI"
       ],
       "strength": 0.01,
       "subpage": "/o-machine.html"

@@ -526,6 +526,7 @@ a{
 	display: flex;
 	flex-direction: row;
 	width: 300%;
+	height: fit-content;
 	transform: translate(0%);
 	transition: transform 1s ease-in-out;
 }
