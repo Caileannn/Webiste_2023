@@ -1,8 +1,8 @@
 ---
 title: (O)MACHINE2
 year: 2022
-cover_img_path: ./css/assets/imgs/test-4.gif
-page_img_path: ./css/assets/imgs/om-01.png
+cover_img_path: ./assets/imgs/omachine/test-4.gif
+page_img_path: ./assets/imgs/omachine/om-01.png
 section: 1
 width: 200
 height: 80

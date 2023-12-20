@@ -1,12 +1,12 @@
 @font-face {
 	font-family: 'Redacted';
-	src: url('assets/fonts/Redaction_70-Italic.woff2') format('woff2');
+	src: url('../assets/fonts/Redaction_70-Italic.woff2') format('woff2');
 	font-display: fallback;
 }
 
 @font-face {
 	font-family: 'Redacted Reg';
-	src: url('assets/fonts/Redaction_70-Regular.woff2') format('woff2');
+	src: url('../assets/fonts/Redaction_70-Regular.woff2') format('woff2');
 	font-display: fallback;
 }
 
@@ -170,40 +170,6 @@ svg {
 	 }
 
 	
-}
-
-
-.main-container {
-	position:relative;
-	/* top: calc(50% - var(--diameter)/2);
-	right:calc(50% - var(--diameter)/2);
-	width: var(--diameter);
-	height: var(--diameter);
-	border-radius:100%; */
-	z-index: 200;
-	/* left: 33vh;
-	height: 100%;
-	width: 66vw; */
-	width: auto;
-	height: 1000px;
-	left: 20w;
-	/* top: 100px; */
-	background:rgb(255, 255, 255, 1);
-	overflow: scroll;
-	-ms-overflow-style: none;  /* IE and Edge */
-  	scrollbar-width: none;  /* Firefox */
-	word-wrap: break-word;
-
-
-    mask-image: url(./assets/circle_mask.svg);
-    mask-size: 100vmin;
-    mask-repeat: no-repeat;
-    mask-position: center;
-
-    -webkit-mask-image: url(./assets/circle_mask.svg);
-    -webkit-mask-size: 100vmin;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: center;
 }
 
 #main-container::-webkit-scrollbar {

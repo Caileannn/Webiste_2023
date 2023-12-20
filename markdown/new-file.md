@@ -1,8 +1,8 @@
 ---
 title: (O)MACHINE3
 year: 2023
-cover_img_path: ./css/assets/imgs/test-4.gif
-page_img_path: ./css/assets/imgs/om-01.png
+cover_img_path: ./assets/imgs/omachine/test-4.gif
+page_img_path: ./assets/imgs/omachine/om-01.png
 section: 2
 width: 200
 height: 80
@@ -16,8 +16,8 @@ draft: true
 # showcase
 2023\ Speak It Now Eat It\ Re-Vision Performing Arts Festival. Belfast, Ireland
 # imgw
-./css/assets/imgs/om-01.png
+./assets/imgs/omachine/om-01.png
 # imgdbl
-./css/assets/imgs/om-01.png\ ./css/assets/imgs/om-01.png
+./assets/imgs/omachine/om-01.png\ ./assets/imgs/omachine/om-01.png
 # video
 https://player.vimeo.com/video/723073426?h=b7cb2c084f

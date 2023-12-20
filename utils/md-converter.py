@@ -190,6 +190,12 @@ def create_subpage(html, title):
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>cailean.finn | {title}</title>
+        <link rel="icon" href="./icons/favicon.ico" type="image/x-icon">
+		<link rel="android-chrome-icon" sizes="192x192" href="./icons/android-chrome-192x192.png">
+		<link rel="android-chrome-icon" sizes="512x512" href="./icons/android-chrome-512x512.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
