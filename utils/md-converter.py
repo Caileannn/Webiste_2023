@@ -13,15 +13,33 @@ def extract_content_by_type(md_content, content_type):
     matches = re.findall(pattern, md_content, re.DOTALL | re.MULTILINE)
     return matches
 
+def convert_links(content):
+    # Regular expression to match (text)[link]
+    regex = r'\(([^)]*)\)\[([^\]]*)\]'
+
+    # Replace each match with the corresponding anchor tag
+    converted_text = re.sub(regex, r'<a href="\2">\1</a>', content)
+    return converted_text
+
 def add_text(content):
+    converted_text = convert_links(content)
     html_text=f"""
-        <span class="text-body">{content}</span>
+        <span class="text-body">{converted_text}</span>
         """
     return html_text
 
 def add_img_wide(content):
     html_text=f"""
         <div class="project-image"> <img class="text-body-image" src="{content}"> </div>
+    """
+    return html_text
+
+def add_img_dbl(img1, img2):
+    html_text=f"""
+<div class="project-image-double">
+			<img class="text-body-image-double" src="{img1}">
+			<img class="text-body-image-double" src="{img2}">
+		</div>
     """
     return html_text
 
@@ -100,6 +118,9 @@ def extract_content_sections(md_content):
         elif section_type == 'showcase':
             year, title, place = map(str.strip, section_content.split('\\'))
             content_list.append({'type': 'showcase', 'year': year, 'title': title, 'place': place})
+        elif section_type == 'imgdbl':
+            img1, img2 = map(str.strip, section_content.split('\\'))
+            content_list.append({'type': 'imgdbl', 'img1': img1, 'img2': img2})
         else:
             # Handle other section types as needed
             pass
@@ -228,6 +249,8 @@ def main():
                     content_body += add_video(attr.get('content'))
                 if (attr.get('type') == 'showcase'):
                     content_body += add_showcase(attr.get('year'), attr.get('title'), attr.get('place'))
+                if (attr.get('type') == 'imgdbl'):
+                    content_body += add_img_dbl(attr.get('img1'), attr.get('img2'))
 
             finger_position = 1
 

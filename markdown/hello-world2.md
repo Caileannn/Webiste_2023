@@ -1,5 +1,5 @@
 ---
-title: (O)MACHINE
+title: (O)MACHINE2
 year: 2022
 cover_img_path: css/assets/imgs/test-4.gif
 page_img_path: css/assets/imgs/om-01.png

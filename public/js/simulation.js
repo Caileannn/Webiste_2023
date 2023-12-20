@@ -4,6 +4,9 @@ async function main() {
 	// Declare the chart dimensions and margins.
 	data = await getJSON()
 
+	// Number of Projects
+	maxSections = (data.nodes).length
+
 	// Node Variables
 	let radius = 6
 	let node_width = 800 / radius;
@@ -62,11 +65,10 @@ async function main() {
 			d3.selectAll('.tooltip-name')
 			.text(d.title)
 			.style('display', 'none');
-
 			var move_to_selection = document.getElementById('slider-cont')
 			var nav_bar = document.getElementById('flex-cont-url')
 			move_to_selection.classList.add('notransition'); // Disable transitions
-			move_to_selection.style.transform = 'translate('+(d.section * -50)+'%)'
+			move_to_selection.style.transform = 'translate(' + (parseInt(d.section) * -100 / maxSections) + '%)'
 			move_to_selection.offsetHeight; // Trigger a reflow, flushing the CSS changes
 			move_to_selection.classList.remove('notransition'); // Re-enable transitions
 			
@@ -84,6 +86,9 @@ async function main() {
 			var element = document.getElementById("content-exit-container")
 			element.style.animation = "fadein 1.5s ease-out"
 			element.style.opacity = 1
+
+			// Set Index to Opened Project
+			sectionIndex = parseInt(d.section)
         })
 		.on("mouseover",  function (event, d) {
 			// Get Position of Mouse/Node for Tooltip //

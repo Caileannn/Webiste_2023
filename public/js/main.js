@@ -141,7 +141,7 @@ function openProjectFromIndex(section) {
 	var move_to_selection = document.getElementById('slider-cont')
 	var nav_bar = document.getElementById('flex-cont-url')
 	move_to_selection.classList.add('notransition'); // Disable transitions
-	move_to_selection.style.transform = 'translate('+(section * -50)+'%)'
+	move_to_selection.style.transform = 'translate('+(parseInt(section) * -100/maxSections)+'%)'
 	move_to_selection.offsetHeight; // Trigger a reflow, flushing the CSS changes
 	move_to_selection.classList.remove('notransition'); // Re-enable transitions
 	
@@ -272,7 +272,3 @@ async function getJSON() {
 	carousel_cont.style.width = maxSections * 100 + "%"
 	return jsondata
 }
-
-
-
-

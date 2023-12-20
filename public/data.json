@@ -1,7 +1,7 @@
 {
   "nodes": [
     {
-      "title": "(O)MACHINE~, 2023",
+      "title": "(O)MACHINE1, 2023",
       "path": "css/assets/imgs/test-4.gif",
       "width": 200,
       "height": 80,
@@ -14,7 +14,7 @@
       "subpage": "/o-machine.html"
     },
     {
-      "title": "(O)MACHINE, 2022",
+      "title": "(O)MACHINE2, 2022",
       "path": "css/assets/imgs/test-4.gif",
       "width": 200,
       "height": 80,
@@ -27,11 +27,11 @@
       "subpage": "/o-machine.html"
     },
     {
-      "title": "(O)MACHINE~, 2023",
+      "title": "(O)MACHINE3, 2023",
       "path": "css/assets/imgs/test-4.gif",
       "width": 200,
       "height": 80,
-      "section": "0",
+      "section": "2",
       "tag": [
         "AI",
         "VIDEO"

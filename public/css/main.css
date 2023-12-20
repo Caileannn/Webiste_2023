@@ -475,6 +475,10 @@ a{
 	text-align: left;
 }
 
+.text-body a{
+	color: #ff0000;
+}
+
 .text-body-arrow {
 	color: #0066FF;
 	margin-right: 10px;
@@ -510,6 +514,23 @@ a{
 	text-align: center;
 	margin: auto;
 }
+
+.project-image-double {
+	width: 100%;
+	height: auto;
+	display: flex;
+	text-align: center;
+	margin: auto;
+	flex-direction: row;
+	gap: 5px;
+}
+
+.project-image-double img{
+	max-width: 50%; 
+	object-fit: scale-down;
+	border-radius: 0px;
+}
+
 
 .arrow-slider {
 	display: flex;
@@ -724,6 +745,15 @@ section {
 	}
 
 	.text-body-image {
+		max-width: 100%;
+	}
+
+	.project-image-double {
+		flex-direction: column;
+		gap: 50px
+	}
+
+	.project-image-double img{
 		max-width: 100%;
 	}
 }
