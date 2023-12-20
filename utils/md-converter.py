@@ -2,6 +2,7 @@ import re
 import markdown2
 import json
 import os
+import argparse
 
 def read_md_file(md_file_path):
     with open(md_file_path, 'r') as file:
@@ -241,8 +242,15 @@ def create_subpage(html, title):
 
 def main():
     # HTML body content (imgs, text, etc.)
+    # Parse command-line arguments
+    parser = argparse.ArgumentParser(description='Process markdown files.')
+    parser.add_argument('--draft', action='store_true', help='Include draft projects')
+    args = parser.parse_args()
+
     content_body = f""
     md_dir = "../markdown"
+
+    draft_flag = args.draft
 
     # Clear the existing nodes
     json_path = "../public/data.json"
@@ -281,58 +289,62 @@ def main():
             node_img = metadata.get('cover_img_path', '')
             section = metadata.get('section', '')
             subpage = metadata.get('subpage', '')
+            draft = metadata.get('draft', '')
 
-            # Add project to index list
-            index_list_template += add_index_item(title, year, section)
+            if draft == "true" and draft_flag is False:
+                print("draft")
+            elif (draft == "true" and draft_flag is True) or draft == 'false':
+                # Add project to index list
+                index_list_template += add_index_item(title, year, section)
 
-            new_node = [
-                {
-                    "title": f"{title}, {year}",
-                    "path": f"{node_img}",
-                    "width": 200,
-                    "height": 80,
-                    "section": section,
-                    "tag": {"AI", "VIDEO"},
-                    "strength": 0.01,
-                    "subpage": f"{subpage}"
-                }
-            ]
+                new_node = [
+                    {
+                        "title": f"{title}, {year}",
+                        "path": f"{node_img}",
+                        "width": 200,
+                        "height": 80,
+                        "section": section,
+                        "tag": {"AI", "VIDEO"},
+                        "strength": 0.01,
+                        "subpage": f"{subpage}"
+                    }
+                ]
 
-            # Convert sets to lists in new_nodes
-            for node in new_node:
-                node["tag"] = list(node["tag"])
+                # Convert sets to lists in new_nodes
+                for node in new_node:
+                    node["tag"] = list(node["tag"])
 
-            json_data["nodes"].extend(new_node)
+                json_data["nodes"].extend(new_node)
 
-            # Extracting all content sections in order
-            content_list = extract_content_sections(md_content)
+                # Extracting all content sections in order
+                content_list = extract_content_sections(md_content)
 
-            for attr in content_list:
-                if (attr.get('type') == 'text'):
-                    content_body += add_text(attr.get('content'))
-                if (attr.get('type') == 'imgw'):
-                    content_body += add_img_wide(attr.get('content'))
-                if (attr.get('type') == 'video'):
-                    content_body += add_video(attr.get('content'))
-                if (attr.get('type') == 'showcase'):
-                    content_body += add_showcase(attr.get('year'), attr.get('title'), attr.get('place'))
-                if (attr.get('type') == 'imgdbl'):
-                    content_body += add_img_dbl(attr.get('img1'), attr.get('img2'))
+                for attr in content_list:
+                    if (attr.get('type') == 'text'):
+                        content_body += add_text(attr.get('content'))
+                    if (attr.get('type') == 'imgw'):
+                        content_body += add_img_wide(attr.get('content'))
+                    if (attr.get('type') == 'video'):
+                        content_body += add_video(attr.get('content'))
+                    if (attr.get('type') == 'showcase'):
+                        content_body += add_showcase(attr.get('year'), attr.get('title'), attr.get('place'))
+                    if (attr.get('type') == 'imgdbl'):
+                        content_body += add_img_dbl(attr.get('img1'), attr.get('img2'))
 
-            finger_position = 1
+                finger_position = 1
 
-            if idx == 0:
-                finger_position = 0
-            if idx == len(files) - 1:
-                finger_position = 2
-            
-            # Generating HTML template
-            html_content = generate_html_template(title, year, content_body, cover_img, finger_position)
-            html_template += html_content
-            create_subpage(html_content, title)
-            # Writing the HTML template to a file
-            # with open(html_output_path, 'w') as html_file:
-            #     html_file.write(html_template)
+                if idx == 0:
+                    finger_position = 0
+                if idx == len(files) - 1:
+                    finger_position = 2
+                
+                # Generating HTML template
+                html_content = generate_html_template(title, year, content_body, cover_img, finger_position)
+                html_template += html_content
+                create_subpage(html_content, title)
+                # Writing the HTML template to a file
+                # with open(html_output_path, 'w') as html_file:
+                #     html_file.write(html_template)
 
     inject_html_into_file('../public/index.html', html_template, "<!-- INJECTION POINT -->")
     inject_html_into_file('../public/index.html', index_list_template, "<!-- INDEX INJECTION POINT -->")
