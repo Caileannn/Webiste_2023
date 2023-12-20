@@ -32,9 +32,11 @@ List of attributes you can use in the markdown file:
 ## Utilities
 
 - ```dither.py```: dithers all images in the ```public/assets/img``` folder, and copies all of the unprocessed images into the ```pre-dither_imgs``` folder.
-- ```md-converter.py```: converts all .md files in ```/markdown``` to html elements, inserting that html into ```index.html``` using regexpressions. It also creates subpages for each file, which are accessible from ```public/works/```
+- ```md-converter.py```: converts all .md files in ```/markdown``` to html elements, inserting that html into ```index.html``` using regexpressions. It also creates subpages for each file, which are accessible from ```public/works/```. You can include drafts by using the ```--draft``` flag when compiling the md files.
 
 ## Workflow
 
 When creating a new page, first create the .md file. When adding images, you need to dither them first using the utils provided, and referencing the image with "d_.." in the .md file.
+
+
 
