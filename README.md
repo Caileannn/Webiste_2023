@@ -29,3 +29,8 @@ List of attributes you can use in the markdown file:
 - ```# showcase```: creates a div which displays the year, title, and place. seperated by ```\```
 - ```(text)[link]```: creates a href tag in a text block
 
+## Utilities
+
+- ```dither.py```: dithers all images in the ```public/assets/img``` folder, and copies all of the unprocessed images into the ```pre-dither_imgs``` folder.
+- ```md-converter.py```: converts all .md files in ```/markdown``` to html elements, inserting that html into ```index.html``` using regexpressions. It also creates subpages for each file, which are accessible from ```public/works/```
+
