@@ -28,7 +28,6 @@ const arrowCenterL = getCenter(hand_L);
 
 // Simulation 🌎 //
 main()
-subpage()
 
 // Get Center of 👉's //
 function getCenter(element) {
