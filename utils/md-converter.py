@@ -18,7 +18,7 @@ def convert_links(content):
     regex = r'\(([^)]*)\)\[([^\]]*)\]'
 
     # Replace each match with the corresponding anchor tag
-    converted_text = re.sub(regex, r'<a href="\2">\1</a>', content)
+    converted_text = re.sub(regex, r'<a href="\2" target="_blank">\1</a>', content)
     return converted_text
 
 def add_text(content):
