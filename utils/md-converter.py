@@ -172,6 +172,67 @@ def remove_content_between_tags(html_file_path, flag):
     with open(html_file_path, 'w', encoding="utf-8") as file:
         file.write(updated_html)
 
+def update_href_links(content):
+    regex = r'href="\.(.*?)"'
+    # Use re.sub to replace matched paths with "..some_path"
+    updated_text = re.sub(regex, r'href="..\1"', content)
+
+    regex = r'src="\.(.*?)"'
+    updated_text = re.sub(regex, r'src="..\1"', updated_text)
+
+    return updated_text
+
+def create_subpage(html, title):
+    html_template=f"""
+    <!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>cailean.finn | {title}</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700&family=IBM+Plex+Mono:wght@100&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="./css/sub.css">
+	</head>
+	<body>
+		<div id="container">
+			<a href="./"><div id="content-exit-container">&#8623;</div></a>
+			<div id="project-cont" class="project-cont">
+				<div class="flex-cont" id="slider-cont">
+				<!-- PROJECT START -->
+                {html}
+    
+<!-- INJECTION POINT -->
+<!-- PROJECT END -->
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+    """
+    # Create URL Name
+    # Use title, but clear all whitespaces, and odd character's
+    # Regular expression to match any character that is not a letter or a digit
+    regex = r'[^a-zA-Z0-9]'
+    html_updated = update_href_links(html_template)
+    # Use re.sub to replace matched characters with an empty string
+    cleaned_title = re.sub(regex, '', title)
+    subpage_dir = '../public/works'
+    # Create new HTML file, name it this, and write to it.
+    new_file_path = f"{subpage_dir}/{cleaned_title}.html"
+    with open(new_file_path, 'w', encoding='utf-8') as file:
+        file.write(html_updated)
+        print(f"created new html file: {cleaned_title}.html")
+
+
+
+
+
 def main():
     # HTML body content (imgs, text, etc.)
     content_body = f""
@@ -260,7 +321,9 @@ def main():
                 finger_position = 2
             
             # Generating HTML template
-            html_template += generate_html_template(title, year, content_body, cover_img, finger_position)
+            html_content = generate_html_template(title, year, content_body, cover_img, finger_position)
+            html_template += html_content
+            create_subpage(html_content, title)
             # Writing the HTML template to a file
             # with open(html_output_path, 'w') as html_file:
             #     html_file.write(html_template)

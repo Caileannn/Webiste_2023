@@ -2,7 +2,7 @@
   "nodes": [
     {
       "title": "(O)MACHINE1, 2023",
-      "path": "css/assets/imgs/test-4.gif",
+      "path": "./css/assets/imgs/test-4.gif",
       "width": 200,
       "height": 80,
       "section": "0",
@@ -15,7 +15,7 @@
     },
     {
       "title": "(O)MACHINE2, 2022",
-      "path": "css/assets/imgs/test-4.gif",
+      "path": "./css/assets/imgs/test-4.gif",
       "width": 200,
       "height": 80,
       "section": "1",
@@ -28,7 +28,7 @@
     },
     {
       "title": "(O)MACHINE3, 2023",
-      "path": "css/assets/imgs/test-4.gif",
+      "path": "./css/assets/imgs/test-4.gif",
       "width": 200,
       "height": 80,
       "section": "2",
