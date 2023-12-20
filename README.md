@@ -24,7 +24,8 @@ List of attributes you can use in the markdown file:
 
 - ```# text```: creates a text block
 - ```# imgw```: creates a image which spans the width of the div
-- ```# imgdbl```: creates a div which consists of two images side by side
+- ```# imgdbl```: creates a div which consists of two images side by side. seperated by ```\```
 - ```# video```: creates a div which consists of a video element
-- ```# showcase```: creates a div which displays the year, title, and place
+- ```# showcase```: creates a div which displays the year, title, and place. seperated by ```\```
+- ```(text)[link]```: creates a href tag in a text block
 
