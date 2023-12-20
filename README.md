@@ -4,7 +4,7 @@
 
 ## How to create a webpage
 
-To create a webpage, create a new .md file with the metadata structure
+To create a webpage, create a new .md file with the metadata structure in the ```/markdown``` directory.
 
 ```
 ---
@@ -19,4 +19,12 @@ subpage: /o-machine.html
 draft: true
 ---
 ```
+
+List of attributes you can use in the markdown file:
+
+- ```# text```: creates a text block
+- ```# imgw```: creates a image which spans the width of the div
+- ```# imgdbl```: creates a div which consists of two images side by side
+- ```# video```: creates a div which consists of a video element
+- ```# showcase```: creates a div which displays the year, title, and place
 
