@@ -1,11 +1,13 @@
 @font-face {
 	font-family: 'Redacted';
 	src: url('assets/fonts/Redaction_70-Italic.woff2') format('woff2');
+	font-display: fallback;
 }
 
 @font-face {
 	font-family: 'Redacted Reg';
 	src: url('assets/fonts/Redaction_70-Regular.woff2') format('woff2');
+	font-display: fallback;
 }
 
 * {
