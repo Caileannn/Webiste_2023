@@ -6,7 +6,8 @@
 
 To create a webpage, create a new .md file with the metadata structure
 
-```---
+```
+---
 title: (O)MACHINE1
 year: 2023
 cover_img_path: ./assets/imgs/omachine/cover.gif
@@ -16,5 +17,6 @@ width: 200
 height: 80
 subpage: /o-machine.html
 draft: true
----```
+---
+```
 
