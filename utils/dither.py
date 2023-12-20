@@ -11,7 +11,7 @@ def dither_image(img_path, rel_dir):
     img = Image.open(img_path)
 
     # Create a palette using median cut
-    palette = hitherdither.palette.Palette.create_by_median_cut(img, n=3)
+    palette = hitherdither.palette.Palette.create_by_median_cut(img, n=9)
 
     # Perform Bayer dithering
     img_dithered = hitherdither.ordered.bayer.bayer_dithering(
