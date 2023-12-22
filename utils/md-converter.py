@@ -29,6 +29,19 @@ def add_text(content):
         """
     return html_text
 
+def add_points(content):
+    # Split content by \, returns an array
+    points = content.split("\\")
+    html_text = ""
+    for point in points:
+        html_text+=f"""
+		<span class="list"><span class="point-symbol">&#8623;</span>{point}</span>
+        """
+    html_list=f"""
+        <span class="list-point">{html_text}</span>
+        """
+    return html_list
+
 def add_img_wide(content):
     html_text=f"""
         <div class="project-image"> <img class="text-body-image" src="{content}"> </div>
@@ -112,6 +125,8 @@ def extract_content_sections(md_content):
 
         if section_type == 'text':
             content_list.append({'type': 'text', 'content': section_content})
+        elif section_type == 'list':
+            content_list.append({'type': 'list', 'content': section_content})
         elif section_type == 'imgw':
             content_list.append({'type': 'imgw', 'content': section_content})
         elif section_type == 'video':
@@ -322,6 +337,8 @@ def main():
                 for attr in content_list:
                     if (attr.get('type') == 'text'):
                         content_body += add_text(attr.get('content'))
+                    if (attr.get('type') == 'list'):
+                        content_body += add_points(attr.get('content'))
                     if (attr.get('type') == 'imgw'):
                         content_body += add_img_wide(attr.get('content'))
                     if (attr.get('type') == 'video'):

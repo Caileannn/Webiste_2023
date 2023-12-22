@@ -24,20 +24,5 @@ The virtual world was created entirely within Unity. Data was captured from Roby
 # imgw
 ./assets/imgs/dwelling/d_monocular.png
 # list
-Created by Peter Power and Leon Butler\
-Choreographer | Performer Robyn Byrne\
-Choreographer | Performer Rosie Stebbing\
-Creative Technologist Cailean Finn\
-Video Artist David Mathúna\
-Lighting Designer Michael Hurley\
-VFX Artist Leon Denise\
-Singer Emma Nash\
-Double Bass Rory Dempsey\
-Drums Davie Ryan\
-Design Associate Dobz O’Brien\
-Company Manager Molly Foley\
-Production Management Showscope\
-Production Assistant Caelinn Ní Bhroin\
-Producer Aisling Murray\
-Executive Producer Maura O'Keeffe\
+Created by Peter Power and Leon Butler\Choreographer | Performer Robyn Byrne\Choreographer | Performer Rosie Stebbing\Creative Technologist Cailean Finn\Video Artist David Mathúna\Lighting Designer Michael Hurley\VFX Artist Leon Denise\Singer Emma Nash\Double Bass Rory Dempsey\Drums Davie Ryan\Design Associate Dobz O’Brien\Company Manager Molly Foley\Production Management Showscope\Production Assistant Caelinn Ní Bhroin\Producer Aisling Murray\Executive Producer Maura O'Keeffe
 
