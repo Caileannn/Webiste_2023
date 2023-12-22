@@ -7,8 +7,8 @@
       "height": 80,
       "section": "0",
       "tag": [
-        "VIDEO",
-        "AI"
+        "AI",
+        "VIDEO"
       ],
       "strength": 0.01,
       "subpage": "/dwelling.html"
@@ -20,8 +20,8 @@
       "height": 80,
       "section": "1",
       "tag": [
-        "VIDEO",
-        "AI"
+        "AI",
+        "VIDEO"
       ],
       "strength": 0.01,
       "subpage": "/o-machine.html"
@@ -33,21 +33,21 @@
       "height": 80,
       "section": "2",
       "tag": [
-        "VIDEO",
-        "AI"
+        "AI",
+        "VIDEO"
       ],
       "strength": 0.01,
       "subpage": "/latent-mirror.html"
     },
     {
       "title": "Undefined Panorama, 2022",
-      "path": "./assets/imgs/undefined/d_latent_cover.gif",
+      "path": "./assets/imgs/undefined/d_cover_undefined.gif",
       "width": 200,
       "height": 80,
       "section": "3",
       "tag": [
-        "VIDEO",
-        "AI"
+        "AI",
+        "VIDEO"
       ],
       "strength": 0.01,
       "subpage": "/undefined.html"

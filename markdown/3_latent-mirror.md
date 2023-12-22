@@ -15,7 +15,9 @@ This audio-visual performance was created in response to the 'Portraits: People 
 ./assets/imgs/latent-mirror/d_latent_02_small.png\ ./assets/imgs/latent-mirror/d_latent_4.png
 # text
 The visual element of the performance was real-time and audio reactive, which captured the facial structure of the performing sound artist. By utilising Machine Learning Models, the captured face was manipulated and distorted further to animate another portrait, in an attempt to deconstruct and isolate key compositional elements of the 'subject'. Through this work, we hoped to reflect on our digital identity, and highlight the disconnection between our physical and virtual presence.
-# imgdbl
-./assets/imgs/latent-mirror/d_latent_5.png\ ./assets/imgs/latent-mirror/d_latent_03.png
+# imgw
+./assets/imgs/latent-mirror/d_latent_03.png
+# imgw
+./assets/imgs/latent-mirror/d_latent_5.png
 # showcase
 2022\ Sound & Portraits\ WGOA, Imagine Arts Festival. Waterford, Ireland

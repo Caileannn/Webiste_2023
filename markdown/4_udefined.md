@@ -1,7 +1,7 @@
 ---
 title: Undefined Panorama
 year: 2022
-cover_img_path: ./assets/imgs/undefined/d_latent_cover.gif
+cover_img_path: ./assets/imgs/undefined/d_cover_undefined.gif
 page_img_path: ./assets/imgs/undefined/d_undefined_3.png
 section: 3
 width: 200

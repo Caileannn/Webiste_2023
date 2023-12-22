@@ -493,7 +493,7 @@ a{
 
 .project-image-double img{
 	max-width: 50%; 
-	object-fit: scale-down;
+	object-fit: cover;
 	border-radius: 0px;
 }
 
