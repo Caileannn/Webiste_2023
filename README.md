@@ -38,5 +38,7 @@ List of attributes you can use in the markdown file:
 
 When creating a new page, first create the .md file. When adding images, you need to dither them first using the utils provided, and referencing the image with "d_.." in the .md file.
 
-
-
+## todo
+* Fix dithering: Change to Floyd Steinberg
+* Add lists to .md conversion
+* Order what files are processed by section number. Same with index.
