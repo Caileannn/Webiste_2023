@@ -5,7 +5,7 @@ import shutil
 
 def dither_image(img_path, rel_dir):
     # Open the original image
-    img = Image.open(img_path)
+    img = Image.open(img_path).convert('RGB')
     #new_size = (int(img.width * 0.5), int(img.height * 0.5))
     #img_resized = img.resize(new_size)
     # 'low-tech': hitherdither.palette.Palette([(30,32,40), (11,21,71),(57,77,174),(158,168,218),(187,196,230),(243,244,250)]),
@@ -14,7 +14,7 @@ def dither_image(img_path, rel_dir):
 	# 'grayscale': hitherdither.palette.Palette([(25,25,25), (75,75,75),(125,125,125),(175,175,175),(225,225,225),(250,250,250)])
 
     #dwelling = hitherdither.palette.Palette([(255, 255, 138), (25,25,25), (75,75,75),(125,125,125),(175,175,175),(225,225,225),(250,250,250), (255, 13, 13), (252, 237, 28), (255, 128, 128)])
-    palette = hitherdither.palette.Palette.create_by_median_cut(img)
+    palette = hitherdither.palette.Palette.image_distance(img)
     # Create a palette using median cut
 
     # Perform Bayer dithering

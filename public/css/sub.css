@@ -491,6 +491,7 @@ a{
 	margin: auto;
 	flex-direction: row;
 	gap: 5px;
+	justify-content: space-around;
 }
 
 .project-image-double img{

@@ -7,8 +7,8 @@
       "height": 80,
       "section": "0",
       "tag": [
-        "AI",
-        "VIDEO"
+        "VIDEO",
+        "AI"
       ],
       "strength": 0.01,
       "subpage": "/dwelling.html"
@@ -20,11 +20,37 @@
       "height": 80,
       "section": "1",
       "tag": [
-        "AI",
-        "VIDEO"
+        "VIDEO",
+        "AI"
       ],
       "strength": 0.01,
       "subpage": "/o-machine.html"
+    },
+    {
+      "title": "Latent Mirror, 2022",
+      "path": "./assets/imgs/latent-mirror/d_latent_cover.gif",
+      "width": 200,
+      "height": 80,
+      "section": "2",
+      "tag": [
+        "VIDEO",
+        "AI"
+      ],
+      "strength": 0.01,
+      "subpage": "/latent-mirror.html"
+    },
+    {
+      "title": "Undefined Panorama, 2022",
+      "path": "./assets/imgs/undefined/d_latent_cover.gif",
+      "width": 200,
+      "height": 80,
+      "section": "3",
+      "tag": [
+        "VIDEO",
+        "AI"
+      ],
+      "strength": 0.01,
+      "subpage": "/undefined.html"
     }
   ]
 }

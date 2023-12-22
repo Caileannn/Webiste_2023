@@ -5,7 +5,7 @@ import os
 import argparse
 
 def read_md_file(md_file_path):
-    with open(md_file_path, 'r') as file:
+    with open(md_file_path, 'r', encoding="utf-8") as file:
         md_content = file.read()
     return md_content
 
@@ -255,7 +255,7 @@ def main():
     # Clear the existing nodes
     json_path = "../public/data.json"
     json_data = ''
-    with open(json_path, 'r') as json_file:
+    with open(json_path, 'r', encoding="utf-8") as json_file:
         json_data = json.load(json_file)
     json_data["nodes"] = []
 
@@ -349,7 +349,7 @@ def main():
     inject_html_into_file('../public/index.html', html_template, "<!-- INJECTION POINT -->")
     inject_html_into_file('../public/index.html', index_list_template, "<!-- INDEX INJECTION POINT -->")
 
-    with open(json_path, 'w') as json_file:
+    with open(json_path, 'w', encoding="utf-8") as json_file:
         json.dump(json_data, json_file, indent=2)
     
 
