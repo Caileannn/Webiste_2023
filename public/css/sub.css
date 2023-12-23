@@ -172,6 +172,17 @@ svg {
 	
 }
 
+.tag-cont {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	font-family: 'Redacted Reg';
+	color: #ff0000;
+	flex-wrap: wrap;
+	row-gap: 5px;
+	column-gap: 5px;
+}
+
 #main-container::-webkit-scrollbar {
 	display: none;
 }

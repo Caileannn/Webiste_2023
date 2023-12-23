@@ -7,6 +7,7 @@ section: 0
 width: 200
 height: 80
 subpage: /dwelling.html
+tags: hello,world
 draft: true
 ---
 # text

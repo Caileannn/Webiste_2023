@@ -75,6 +75,19 @@ def add_index_item(title, year, section):
     """
     return html_text
 
+def add_tags(content):
+    tag_template = ''
+    for tag in content:
+        tag_template +=f"""
+			<span class="tag">&#10035; {tag}</span>
+		"""
+    html_text=f"""
+    <div class="tag-cont">
+		{tag_template}
+	</div>
+    """
+    return html_text
+
 def generate_html_template(title, year, content, image, finger_position):
     r_hand = '👉'
     l_hand = '👈'
@@ -305,6 +318,7 @@ def main():
             section = metadata.get('section', '')
             subpage = metadata.get('subpage', '')
             draft = metadata.get('draft', '')
+            tags = metadata.get('tags', '')
 
             if draft == "true" and draft_flag is False:
                 print("draft")
@@ -319,20 +333,22 @@ def main():
                         "width": 200,
                         "height": 80,
                         "section": section,
-                        "tag": {"AI", "VIDEO"},
+                        "tags": tags,
                         "strength": 0.01,
                         "subpage": f"{subpage}"
                     }
                 ]
 
-                # Convert sets to lists in new_nodes
+                #Convert sets to lists in new_nodes
                 for node in new_node:
-                    node["tag"] = list(node["tag"])
+                    node["tags"] = tags.split(',')
+
 
                 json_data["nodes"].extend(new_node)
 
                 # Extracting all content sections in order
                 content_list = extract_content_sections(md_content)
+                content_body += add_tags(node["tags"])
 
                 for attr in content_list:
                     if (attr.get('type') == 'text'):
@@ -347,6 +363,7 @@ def main():
                         content_body += add_showcase(attr.get('year'), attr.get('title'), attr.get('place'))
                     if (attr.get('type') == 'imgdbl'):
                         content_body += add_img_dbl(attr.get('img1'), attr.get('img2'))
+
 
                 finger_position = 1
 

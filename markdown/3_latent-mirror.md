@@ -7,6 +7,7 @@ section: 2
 width: 200
 height: 80
 subpage: /latent-mirror.html
+tags: hello,world
 draft: true
 ---
 # text

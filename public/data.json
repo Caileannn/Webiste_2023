@@ -6,9 +6,9 @@
       "width": 200,
       "height": 80,
       "section": "0",
-      "tag": [
-        "VIDEO",
-        "AI"
+      "tags": [
+        "hello",
+        "world"
       ],
       "strength": 0.01,
       "subpage": "/dwelling.html"
@@ -19,9 +19,9 @@
       "width": 200,
       "height": 80,
       "section": "1",
-      "tag": [
-        "VIDEO",
-        "AI"
+      "tags": [
+        "hello",
+        "world"
       ],
       "strength": 0.01,
       "subpage": "/o-machine.html"
@@ -32,9 +32,9 @@
       "width": 200,
       "height": 80,
       "section": "2",
-      "tag": [
-        "VIDEO",
-        "AI"
+      "tags": [
+        "hello",
+        "world"
       ],
       "strength": 0.01,
       "subpage": "/latent-mirror.html"
@@ -45,9 +45,9 @@
       "width": 200,
       "height": 80,
       "section": "3",
-      "tag": [
-        "VIDEO",
-        "AI"
+      "tags": [
+        "hello",
+        "world"
       ],
       "strength": 0.01,
       "subpage": "/undefined.html"

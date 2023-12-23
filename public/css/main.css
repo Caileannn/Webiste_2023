@@ -431,6 +431,17 @@ a{
 	
 }
 
+.tag-cont {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	font-family: 'Redacted Reg';
+	color: #ff0000;
+	flex-wrap: wrap;
+	row-gap: 5px;
+	column-gap: 5px;
+}
+
 .project-text-body {
 	font-family: 'IBM Plex Sans', sans-serif;
 	font-style: bold;

@@ -7,6 +7,7 @@ section: 1
 width: 200
 height: 80
 subpage: /o-machine.html
+tags: hello,world
 draft: true
 ---
 # text
