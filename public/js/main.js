@@ -146,6 +146,10 @@ function openProjectFromIndex(section) {
 	
 	var element = document.getElementById("project-cont");
 	element.style.transform = "translate(0%, 0%)"
+	element.style.animation = "fadein 1s ease-out"
+	element.style.opacity = "1"
+	element.style.display = "block"
+	
 	var element = document.getElementById("index-text-cont");
 	element.style.animation = "blurin-index 1.5s ease-out"
 	element.style.filter = "blur(5px)"
