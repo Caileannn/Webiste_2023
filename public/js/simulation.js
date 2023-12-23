@@ -74,6 +74,10 @@ async function main() {
 			
 			var element = document.getElementById("project-cont");
 			element.style.transform = "translate(0%, 0%)"
+			element.style.animation = "fadein 1s ease-out"
+			element.style.opacity = "1"
+			element.style.display = "block"
+
 			var element = document.getElementById("main-container");
 			element.style.animation = "blurin 1.5s ease-out"
 			element.style.filter = "blur(15px)"

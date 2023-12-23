@@ -388,19 +388,12 @@ a{
 	z-index: 400;
 	width: 100%;
 	height: 100%;
-	-ms-overflow-style: none;  /* IE and Edge */
-	scrollbar-width: none;  /* Firefox */
 	/* background-color: #0066FF; */
-	opacity: 1;
-	display: block;
-	overflow-y: scroll;
-	overflow-x: hidden;
-	transform: translate(0%, 100%);
+	opacity: 0;
+	/* display: block; */
+	transform: translate(0%, 0%);
 	transition: transform 1s ease-in-out;
 	margin: auto;
-}
-
-#project-cont::-webkit-scrollbar {
 	display: none;
 }
 
@@ -539,7 +532,7 @@ a{
 	display: flex;
 	flex-direction: row;
 	width: 300%;
-	height: fit-content;
+	height: 100%;
 	transform: translate(0%);
 	transition: transform 1s ease-in-out;
 }
@@ -547,11 +540,15 @@ a{
 .flex-cont section {
 	flex-basis: 100%;
 	justify-content: center;
-}
-
-section {
+	overflow-y: scroll;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
 	width: 100%;
 }
+
+/* .flex-cont section::-webkit-scrollbar {
+	display: none;
+} */
 
 .node-gif {
 	cursor: pointer;
