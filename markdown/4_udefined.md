@@ -7,8 +7,8 @@ section: 3
 width: 200
 height: 80
 subpage: /undefined.html
-tags: hello,world
-draft: true
+tags: Web, Creative Coding
+draft: false
 ---
 
 # text
