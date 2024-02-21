@@ -20,8 +20,8 @@ Designed and developed by Cailean Finn
 # imgw
 ./assets/imgs/data/d_data_2.png
 # imgdbl
-./assets/imgs/data/d_data_7.png\ ./assets/imgs/data/d_tsne-data.gif
+./assets/imgs/data/d_data_5.png\ ./assets/imgs/data/d_tsne-data.gif
 # imgw
-./assets/imgs/data/d_data_5.png
+./assets/imgs/data/d_data_1.webp
 # imgw
 ./assets/imgs/data/d_data_4.webp
