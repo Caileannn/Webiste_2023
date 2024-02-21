@@ -51,6 +51,19 @@
       ],
       "strength": 0.01,
       "subpage": "/undefined.html"
+    },
+    {
+      "title": "The BIG D.A.T.A Interview, 2023",
+      "path": "./assets/imgs/data/d_data-icon.gif",
+      "width": 200,
+      "height": 80,
+      "section": "4",
+      "tags": [
+        "Web",
+        " ML"
+      ],
+      "strength": 0.01,
+      "subpage": "/data.html"
     }
   ]
 }
