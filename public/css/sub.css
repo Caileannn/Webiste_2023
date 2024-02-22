@@ -200,9 +200,16 @@ p {
 
 .list-point {
 	display: flex;
-	flex-direction: column;
-	column-gap: 5px;
-	text-align: center;
+	flex-direction: row;
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content:space-evenly
+}
+
+.list{
+	display: block;
+	width: fit-content;
+	padding-left: 10px;
 }
 
 #url-container {
