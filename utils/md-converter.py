@@ -57,10 +57,18 @@ def add_img_dbl(img1, img2):
     """
     return html_text
 
-def add_video(content):
-    html_text=f"""
-        <span class="text-body-video"><iframe title="vimeo-player" src="{content}" class="video-frame"   allowfullscreen></iframe></span>
-    """
+def add_video(content, player):
+    # if(player == 1):
+    #     html_text=f"""
+	# 		<span class="text-body-video"><iframe title="vimeo-player" src="{content}" class="video-frame"   allowfullscreen></iframe></span>
+	# 	"""
+    #     return html_text
+  
+    # if(player == 2):
+    #     html_text=f"""
+	# 		<span class="text-body-video"><iframe class="video-frame" src="{content}" title="cailean" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></iframe></span>
+	# 	"""
+    html_text =f"""{content}"""
     return html_text
 
 def add_showcase(year, title, place):
@@ -211,7 +219,7 @@ def update_href_links(content):
 
     return updated_text
 
-def create_subpage(html, title):
+def create_subpage(html, title, subpage):
     html_template=f"""
     <!DOCTYPE html>
 <html>
@@ -259,7 +267,7 @@ def create_subpage(html, title):
     cleaned_title = re.sub(regex, '', title)
     subpage_dir = '../public/works'
     # Create new HTML file, name it this, and write to it.
-    new_file_path = f"{subpage_dir}/{cleaned_title}.html"
+    new_file_path = f"{subpage_dir}/{subpage}"
     with open(new_file_path, 'w', encoding='utf-8') as file:
         file.write(html_updated)
         print(f"created new html file: {cleaned_title}.html")
@@ -358,7 +366,7 @@ def main():
                     if (attr.get('type') == 'imgw'):
                         content_body += add_img_wide(attr.get('content'))
                     if (attr.get('type') == 'video'):
-                        content_body += add_video(attr.get('content'))
+                        content_body += add_video(attr.get('content'), 2)
                     if (attr.get('type') == 'showcase'):
                         content_body += add_showcase(attr.get('year'), attr.get('title'), attr.get('place'))
                     if (attr.get('type') == 'imgdbl'):
@@ -375,7 +383,7 @@ def main():
                 # Generating HTML template
                 html_content = generate_html_template(title, year, content_body, cover_img, finger_position)
                 html_template += html_content
-                create_subpage(html_content, title)
+                create_subpage(html_content, title, subpage)
                 # Writing the HTML template to a file
                 # with open(html_output_path, 'w') as html_file:
                 #     html_file.write(html_template)

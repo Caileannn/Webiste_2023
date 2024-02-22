@@ -64,6 +64,19 @@
       ],
       "strength": 0.01,
       "subpage": "/dwelling.html"
+    },
+    {
+      "title": "The Electronic Image, An Object of Time & Energy, 2021",
+      "path": "./assets/imgs/electronic-image/d_electronic-image.gif",
+      "width": 200,
+      "height": 80,
+      "section": "5",
+      "tags": [
+        "Virtualisation",
+        " Video Synthesis/Art"
+      ],
+      "strength": 0.01,
+      "subpage": "/electronic-image.html"
     }
   ]
 }

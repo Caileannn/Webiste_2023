@@ -17,4 +17,4 @@ draft: false
 # imgw
 ./assets/imgs/omachine/d_om_2.png
 # video
-https://player.vimeo.com/video/723073426?h=b7cb2c084f
+<iframe src="https://player.vimeo.com/video/723073426?h=b7cb2c084f" class="video-frame" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
