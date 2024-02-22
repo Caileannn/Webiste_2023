@@ -77,6 +77,19 @@
       ],
       "strength": 0.01,
       "subpage": "/electronic-image.html"
+    },
+    {
+      "title": "AI x Body, 2022",
+      "path": "./assets/imgs/electronic-image/d_electronic-image.gif",
+      "width": 200,
+      "height": 80,
+      "section": "6",
+      "tags": [
+        "AI",
+        " Human Pose Estimation"
+      ],
+      "strength": 0.01,
+      "subpage": "/ai-x-body.html"
     }
   ]
 }

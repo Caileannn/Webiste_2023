@@ -377,6 +377,18 @@ a{
 	height: 10px;
 }
 
+.about-divider {
+	width:  100%;
+	border-bottom: 1px solid #000000;
+	height: 5px;
+}
+
+.about-header {
+	font-size: 1.5rem;
+}
+
+
+
 #emoji-cont {
 	cursor: pointer;
 	font-weight: normal;
