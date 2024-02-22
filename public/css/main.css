@@ -37,7 +37,7 @@ html {
 
 body {
 	/* add gradient */
-	background: radial-gradient(circle at center, #0066FF 0, #ffffff calc(100% - 25vw), #ffffff 100%);
+	background: radial-gradient(circle at center, #0066FF 0, #80b3ff calc(100% - 25vw), #ffffff 100%);
 	background-repeat: no-repeat;
 	height: 100%;
 	padding: 0px;
@@ -207,7 +207,8 @@ p {
 #flex-cont-url {
 	display: flex;
 	flex-direction: column;
-	font-family: 'IBM Plex Sans', sans-serif;
+	/* font-family: 'IBM Plex Sans', sans-serif; */
+	font-family: 'Redacted';
 	font-style: bold;
 	font-size: 2rem;
 	color: #0066FF;
