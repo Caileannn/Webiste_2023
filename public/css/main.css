@@ -639,6 +639,10 @@ a{
 		font-size: 1.2rem;
 	}
 
+	.list-point {
+		font-size: 1.2rem;
+	}
+
 	.parent-about-tc {
 		font-size: 1.7rem;
 	}
@@ -778,6 +782,14 @@ a{
 		/* padding-left: 20px;
 		padding-right: 20px; */
 		width: 85%;
+	}
+	
+	.list-point {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		flex-wrap: wrap;
+		justify-content:center;
 	}
 }
 

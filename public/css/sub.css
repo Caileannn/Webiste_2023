@@ -643,6 +643,10 @@ section {
 		font-size: 1.2rem;
 	}
 
+	.list-point {
+		font-size: 1.2rem;
+	}
+
 	.parent-about-tc {
 		font-size: 1.7rem;
 	}
@@ -760,6 +764,14 @@ section {
 @media screen and (max-width: 600px) {
 	.parent-about-tc {
 		font-size: 1.5rem;
+	}
+
+	.list-point {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		flex-wrap: wrap;
+		justify-content:center;
 	}
 
 	.index-list {

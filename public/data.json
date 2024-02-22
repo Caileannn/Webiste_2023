@@ -14,30 +14,17 @@
       "subpage": "/dwelling.html"
     },
     {
-      "title": "(O)MACHINE, 2023",
-      "path": "./assets/imgs/omachine/cover.gif",
+      "title": "The BIG D.A.T.A Interview, 2023",
+      "path": "./assets/imgs/data/d_data-icon.gif",
       "width": 200,
       "height": 80,
-      "section": "1",
+      "section": "4",
       "tags": [
-        "Natural Language Processing",
-        "Simulation"
+        "Web",
+        " ML"
       ],
       "strength": 0.01,
-      "subpage": "/o-machine.html"
-    },
-    {
-      "title": "Latent Mirror, 2022",
-      "path": "./assets/imgs/latent-mirror/d_latent_cover.gif",
-      "width": 200,
-      "height": 80,
-      "section": "2",
-      "tags": [
-        "Performance",
-        " AI"
-      ],
-      "strength": 0.01,
-      "subpage": "/latent-mirror.html"
+      "subpage": "/data.html"
     },
     {
       "title": "Undefined Panorama, 2022",
@@ -53,17 +40,30 @@
       "subpage": "/undefined.html"
     },
     {
-      "title": "The BIG D.A.T.A Interview, 2023",
-      "path": "./assets/imgs/data/d_data-icon.gif",
+      "title": "Latent Mirror, 2022",
+      "path": "./assets/imgs/latent-mirror/d_latent_cover.gif",
       "width": 200,
       "height": 80,
-      "section": "4",
+      "section": "2",
       "tags": [
-        "Web",
-        " ML"
+        "Performance",
+        " AI"
       ],
       "strength": 0.01,
-      "subpage": "/data.html"
+      "subpage": "/latent-mirror.html"
+    },
+    {
+      "title": "(O)MACHINE, 2022",
+      "path": "./assets/imgs/omachine/cover.gif",
+      "width": 200,
+      "height": 80,
+      "section": "1",
+      "tags": [
+        "Natural Language Processing",
+        "Simulation"
+      ],
+      "strength": 0.01,
+      "subpage": "/o-machine.html"
     }
   ]
 }

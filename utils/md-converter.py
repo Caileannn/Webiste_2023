@@ -296,7 +296,7 @@ def main():
     # Loop over each .md file
     files = os.listdir(md_dir)
 
-    for idx, file in enumerate(files):
+    for idx, file in enumerate(reversed(files)):
         # Check if it's a file (not a subdirectory)
         if os.path.isfile(os.path.join(md_dir, file)):
             # Process the file here
@@ -382,7 +382,7 @@ def main():
 
     inject_html_into_file('../public/index.html', html_template, "<!-- INJECTION POINT -->")
     inject_html_into_file('../public/index.html', index_list_template, "<!-- INDEX INJECTION POINT -->")
-
+    print(type(index_list_template))
     with open(json_path, 'w', encoding="utf-8") as json_file:
         json.dump(json_data, json_file, indent=2)
     
