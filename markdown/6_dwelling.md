@@ -3,7 +3,7 @@ title: Dwelling
 year: 2023
 cover_img_path: ./assets/imgs/dwelling/d_cover_dwelling_2.gif
 page_img_path: ./assets/imgs/dwelling/d_dwelling_1.png
-section: 0
+section: 4
 width: 200
 height: 80
 subpage: /dwelling.html
@@ -18,6 +18,12 @@ The virtual world was created entirely within Unity. Data was captured from Roby
 2023\ Beta Festival\ Project Arts Center. Dublin, Ireland
 # imgw
 ./assets/imgs/dwelling/d_dwelling_7.png
+# imgw
+./assets/imgs/dwelling/d_dwelling_9.JPEG
+# imgw
+./assets/imgs/dwelling/d_dwelling_8.JPEG
+# imgw
+./assets/imgs/dwelling/d_dwelling_10.JPEG
 # imgw
 ./assets/imgs/dwelling/d_monocular.png
 # list

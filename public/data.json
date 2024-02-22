@@ -1,50 +1,24 @@
 {
   "nodes": [
     {
-      "title": "Dwelling, 2023",
-      "path": "./assets/imgs/dwelling/d_cover_dwelling_2.gif",
+      "title": "(O)MACHINE, 2022",
+      "path": "./assets/imgs/omachine/cover.gif",
       "width": 200,
       "height": 80,
       "section": "0",
       "tags": [
-        "Unity",
-        "Performance"
+        "Natural Language Processing",
+        "Simulation"
       ],
       "strength": 0.01,
-      "subpage": "/dwelling.html"
-    },
-    {
-      "title": "The BIG D.A.T.A Interview, 2023",
-      "path": "./assets/imgs/data/d_data-icon.gif",
-      "width": 200,
-      "height": 80,
-      "section": "4",
-      "tags": [
-        "Web",
-        " ML"
-      ],
-      "strength": 0.01,
-      "subpage": "/data.html"
-    },
-    {
-      "title": "Undefined Panorama, 2022",
-      "path": "./assets/imgs/undefined/d_cover_undefined.gif",
-      "width": 200,
-      "height": 80,
-      "section": "3",
-      "tags": [
-        "Web",
-        " Creative Coding"
-      ],
-      "strength": 0.01,
-      "subpage": "/undefined.html"
+      "subpage": "/o-machine.html"
     },
     {
       "title": "Latent Mirror, 2022",
       "path": "./assets/imgs/latent-mirror/d_latent_cover.gif",
       "width": 200,
       "height": 80,
-      "section": "2",
+      "section": "1",
       "tags": [
         "Performance",
         " AI"
@@ -53,17 +27,43 @@
       "subpage": "/latent-mirror.html"
     },
     {
-      "title": "(O)MACHINE, 2022",
-      "path": "./assets/imgs/omachine/cover.gif",
+      "title": "Undefined Panorama, 2022",
+      "path": "./assets/imgs/undefined/d_cover_undefined.gif",
       "width": 200,
       "height": 80,
-      "section": "1",
+      "section": "2",
       "tags": [
-        "Natural Language Processing",
-        "Simulation"
+        "Web",
+        " Creative Coding"
       ],
       "strength": 0.01,
-      "subpage": "/o-machine.html"
+      "subpage": "/undefined.html"
+    },
+    {
+      "title": "The BIG D.A.T.A Interview, 2023",
+      "path": "./assets/imgs/data/d_data-icon.gif",
+      "width": 200,
+      "height": 80,
+      "section": "3",
+      "tags": [
+        "Web",
+        " ML"
+      ],
+      "strength": 0.01,
+      "subpage": "/data.html"
+    },
+    {
+      "title": "Dwelling, 2023",
+      "path": "./assets/imgs/dwelling/d_cover_dwelling_2.gif",
+      "width": 200,
+      "height": 80,
+      "section": "4",
+      "tags": [
+        "Unity",
+        "Performance"
+      ],
+      "strength": 0.01,
+      "subpage": "/dwelling.html"
     }
   ]
 }

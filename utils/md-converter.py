@@ -296,7 +296,7 @@ def main():
     # Loop over each .md file
     files = os.listdir(md_dir)
 
-    for idx, file in enumerate(reversed(files)):
+    for idx, file in enumerate(files):
         # Check if it's a file (not a subdirectory)
         if os.path.isfile(os.path.join(md_dir, file)):
             # Process the file here

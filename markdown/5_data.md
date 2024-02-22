@@ -3,7 +3,7 @@ title: The BIG D.A.T.A Interview
 year: 2023
 cover_img_path: ./assets/imgs/data/d_data-icon.gif
 page_img_path: ./assets/imgs/data/d_data_6.webp
-section: 4
+section: 3
 width: 200
 height: 80
 subpage: /data.html
@@ -16,7 +16,7 @@ draft: false
 # text
 The website presents the interview in both linear and non-linear formats. By utilising machine learning and natural language processing, text segments extracted from the interview were ranked against key topics; creating a higher-dimensional understanding, and projection of the interview - which is commonly referred to as the latent space. After, a t-SNE algorithm was applied to high-dimensional space, flattening it into two dimensions, represented in the interactive map; allowing the user to navigate the interview from the persepctive of the machine.
 # text
-Designed and developed by Cailean Finn
+Designed and developed using p5js, by Cailean Finn.
 # imgw
 ./assets/imgs/data/d_data_2.png
 # imgdbl
