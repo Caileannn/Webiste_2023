@@ -51,9 +51,6 @@ body {
 	height: fit-content;
 }
 
-svg {
-}
-
 #main-container {
 	position: absolute;
 	z-index: 200;
@@ -236,7 +233,7 @@ p {
 	cursor: pointer;
 	z-index: 1000;
 	opacity: 100%;
-	color: #0066FF;
+	color: #ff0000;
 }
 
 #name-cont {
@@ -684,6 +681,25 @@ section {
 		width: 100%;
 	}
 
+	.project-text-header{
+		font-size: 1.5rem;
+	}
+	.tag {
+		font-size: 1.2rem;
+	}
+
+	.tag {
+		font-size: 1.2rem;
+	}
+
+	.text-body {
+		font-size: 1rem;
+	}
+
+	.list-point {
+		font-size: 1rem;
+	}
+
 	#flex-cont-url {
 		flex-direction: row;
 		justify-content: space-between;
@@ -808,11 +824,6 @@ section {
 
 	.index-list {
 		font-size: 1.2rem;
-	}
-
-	.text-body {
-		font-size: 1.2rem;
-		
 	}
 
 }
