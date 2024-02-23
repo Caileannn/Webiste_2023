@@ -61,9 +61,11 @@ async function main() {
 		})
 		.on("click", function (event, d) {
 			project_open = true;
+			// Mobile Pointer Update
 			d3.select(this).transition().ease(d3.easeSin).duration(400).attr("width", node_width);
 			d3.selectAll('.tooltip-name')
 				.style('display', 'none');
+			// Mobile Pointer Update
 			d3.selectAll('.tooltip-name')
 				.text(d.title)
 				.style('display', 'none');
