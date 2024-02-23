@@ -3,7 +3,7 @@ title: The BIG D.A.T.A Interview
 year: 2023
 cover_img_path: ./assets/imgs/data/d_data-icon.gif
 page_img_path: ./assets/imgs/data/d_data_6.webp
-section: 3
+section: 1
 width: 200
 height: 80
 subpage: /data.html

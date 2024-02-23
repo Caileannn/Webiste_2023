@@ -3,7 +3,7 @@ title: Latent Mirror
 year: 2022
 cover_img_path: ./assets/imgs/latent-mirror/d_latent_cover.gif
 page_img_path: ./assets/imgs/latent-mirror/d_latent_01.png
-section: 1
+section: 4
 width: 200
 height: 80
 subpage: /latent-mirror.html

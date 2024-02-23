@@ -3,7 +3,7 @@ title: The Electronic Image, An Object of Time & Energy
 year: 2021
 cover_img_path: ./assets/imgs/electronic-image/d_electronic-image.gif
 page_img_path: ./assets/imgs/electronic-image/d_electronic-image-header-cropped.png
-section: 5
+section: 6
 width: 200
 height: 80
 subpage: /electronic-image.html

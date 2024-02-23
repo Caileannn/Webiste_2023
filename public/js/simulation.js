@@ -69,6 +69,7 @@ async function main() {
 			var nav_bar = document.getElementById('flex-cont-url')
 			move_to_selection.classList.add('notransition'); // Disable transitions
 			move_to_selection.style.transform = 'translate(' + (parseInt(d.section) * -100 / maxSections) + '%)'
+			sectionIndex = parseInt(d.section)
 			move_to_selection.offsetHeight; // Trigger a reflow, flushing the CSS changes
 			move_to_selection.classList.remove('notransition'); // Re-enable transitions
 			

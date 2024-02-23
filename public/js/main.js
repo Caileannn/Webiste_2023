@@ -140,7 +140,8 @@ function openProjectFromIndex(section) {
 	var move_to_selection = document.getElementById('slider-cont')
 	var nav_bar = document.getElementById('flex-cont-url')
 	move_to_selection.classList.add('notransition'); // Disable transitions
-	move_to_selection.style.transform = 'translate('+(parseInt(section) * -100/maxSections)+'%)'
+	move_to_selection.style.transform = 'translate(' + (parseInt(section) * -100 / maxSections) + '%)'
+	sectionIndex = parseInt(section)
 	move_to_selection.offsetHeight; // Trigger a reflow, flushing the CSS changes
 	move_to_selection.classList.remove('notransition'); // Re-enable transitions
 	
@@ -172,24 +173,33 @@ window.addEventListener("DOMContentLoaded", (event) => {
     const l_arrow = document.querySelectorAll(".sl-arrow")
 	const r_arrow = document.querySelectorAll(".sr-arrow")
 	const slider_cont = document.getElementById("slider-cont")
-
+	
 	l_arrow.forEach(arrow => {
 		arrow.addEventListener("click", function () {
+			console.log("c_index" + sectionIndex)
 			sectionIndex -= 1
+			console.log("u_index" + sectionIndex)
+			console.log("max" + maxSections)
 			if(sectionIndex < 0){
 				sectionIndex = 0
 			}
-			slider_cont.style.transform = 'translate(' + (sectionIndex * -(100/maxSections)) + '%)'
+			slider_cont.style.transform = 'translate(' + (sectionIndex * -(100 / maxSections)) + '%)'
+			//console.log(maxSections)
 		})
 		
 	})
 
 	r_arrow.forEach(arrow => {
 		arrow.addEventListener("click", function () {
+			console.log("c_index" + sectionIndex)
 			sectionIndex += 1
+			console.log("u_index" + sectionIndex)
+			console.log("max" + maxSections)
 			if(sectionIndex > maxSections-1){
-				sectionIndex = 1
+				sectionIndex -= 1
+				console.log(sectionIndex)
 			}
+			//console.log(maxSections)
 			slider_cont.style.transform = 'translate(' + (sectionIndex * -(100/maxSections)) + '%)'
 		})
 	})

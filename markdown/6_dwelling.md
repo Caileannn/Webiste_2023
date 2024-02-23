@@ -3,7 +3,7 @@ title: Dwelling
 year: 2023
 cover_img_path: ./assets/imgs/dwelling/d_cover_dwelling_2.gif
 page_img_path: ./assets/imgs/dwelling/d_dwelling_1.png
-section: 4
+section: 0
 width: 200
 height: 80
 subpage: /dwelling.html

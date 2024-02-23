@@ -3,7 +3,7 @@ title: (O)MACHINE
 year: 2022
 cover_img_path: ./assets/imgs/omachine/cover.gif
 page_img_path: ./assets/imgs/omachine/d_om_1.png
-section: 0
+section: 5
 width: 200
 height: 80
 subpage: /o-machine.html

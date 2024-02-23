@@ -303,8 +303,8 @@ def main():
 
     # Loop over each .md file
     files = os.listdir(md_dir)
-
-    for idx, file in enumerate(files):
+    section_index = 0
+    for idx, file in enumerate(reversed(files)):
         # Check if it's a file (not a subdirectory)
         if os.path.isfile(os.path.join(md_dir, file)):
             # Process the file here
@@ -332,7 +332,7 @@ def main():
                 print("draft")
             elif (draft == "true" and draft_flag is True) or draft == 'false':
                 # Add project to index list
-                index_list_template += add_index_item(title, year, section)
+                index_list_template += add_index_item(title, year, section_index)
 
                 new_node = [
                     {
@@ -340,7 +340,7 @@ def main():
                         "path": f"{node_img}",
                         "width": 200,
                         "height": 80,
-                        "section": section,
+                        "section": section_index,
                         "tags": tags,
                         "strength": 0.01,
                         "subpage": f"{subpage}"
@@ -387,6 +387,8 @@ def main():
                 # Writing the HTML template to a file
                 # with open(html_output_path, 'w') as html_file:
                 #     html_file.write(html_template)
+
+                section_index += 1
 
     inject_html_into_file('../public/index.html', html_template, "<!-- INJECTION POINT -->")
     inject_html_into_file('../public/index.html', index_list_template, "<!-- INDEX INJECTION POINT -->")
