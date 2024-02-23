@@ -727,7 +727,7 @@ a{
 
 	#emoji-cont {
 		order: 1;
-	
+		display: none;
 	}
 
 	.about-text-cont {
@@ -781,6 +781,22 @@ a{
 	.project-image-double img{
 		max-width: 100%;
 	}
+
+	.project-text-header{
+		font-size: 1.5rem;
+	}
+
+	.tag {
+		font-size: 1.2rem;
+	}
+
+	.text-body {
+		font-size: 1rem;
+	}
+
+	.list-point {
+		font-size: 1rem;
+	}
 }
 
 @media screen and (max-width: 600px) {
@@ -830,11 +846,6 @@ a{
 
 	.index-list {
 		font-size: 1.2rem;
-	}
-
-	.text-body {
-		font-size: 1.2rem;
-		
 	}
 
 }
