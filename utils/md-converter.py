@@ -299,7 +299,7 @@ def main():
     remove_content_between_tags('../public/index.html', 2)
 
     html_template = ''
-    index_list_template = ''
+    index_list_template = """<span class="li-padding"></span>"""
 
     # Loop over each .md file
     files = os.listdir(md_dir)
@@ -327,7 +327,7 @@ def main():
             subpage = metadata.get('subpage', '')
             draft = metadata.get('draft', '')
             tags = metadata.get('tags', '')
-
+            
             if draft == "true" and draft_flag is False:
                 print("draft")
             elif (draft == "true" and draft_flag is True) or draft == 'false':
