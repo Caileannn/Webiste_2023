@@ -15,7 +15,7 @@ This video series comprises of three individual studies, namely Embedded Energy,
 # text
 The three studies have been shaped by the experimental processes, techniques, and philosophies of the pioneering artists working with video. The artists in question, specifically the works of Steina and Woody Vasulka, who were driven by their yearning to understand the electronic signal and to formulate an electronic lexicon. The work, in its entirety, is an investigation of the unique set of “codes” embedded within the language of the video signal, consequently, recognising the electronic image as an object of time, energy, and it's programmable building element – the waveform.
 # text
-(📎)[""./assets/pdfs/Cailean Finn - Thesis - The Electronic Image_An Object of Time and Energy.pdf"] thesis pdf
+(📎thesis.pdf)[./assets/pdfs/thesis.pdf] 
 # showcase
 2022\ The Limerick Show, Ormston House \  Limerick, Ireland.
 # imgdbl
