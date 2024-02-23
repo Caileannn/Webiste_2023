@@ -50,21 +50,23 @@ async function main() {
 		.on("mouseenter", function (d) {
 			d3.select(this).transition().ease(d3.easeSin).duration(400).attr("width", node_width * 3);
 			d3.select('.tooltip-name')
-			.text(d.title)
-			.style('display', 'block')
-        })
-        .on("mouseleave", function (d) {
+				.text(d.title)
+				.style('display', 'block')
+		})
+		.on("mouseleave", function (d) {
 			d3.select(this).transition().ease(d3.easeSin).duration(400).attr("width", node_width);
 			d3.selectAll('.tooltip-name')
-			.text(d.title)
-			.style('display', 'none');
-        })
+				.text(d.title)
+				.style('display', 'none');
+		})
 		.on("click", function (event, d) {
 			project_open = true;
-
+			d3.select(this).transition().ease(d3.easeSin).duration(400).attr("width", node_width);
 			d3.selectAll('.tooltip-name')
-			.text(d.title)
-			.style('display', 'none');
+				.style('display', 'none');
+			d3.selectAll('.tooltip-name')
+				.text(d.title)
+				.style('display', 'none');
 			var move_to_selection = document.getElementById('slider-cont')
 			var nav_bar = document.getElementById('flex-cont-url')
 			move_to_selection.classList.add('notransition'); // Disable transitions
@@ -94,36 +96,36 @@ async function main() {
 
 			// Set Index to Opened Project
 			sectionIndex = parseInt(d.section)
-        })
-		.on("mouseover",  function (event, d) {
-			// Get Position of Mouse/Node for Tooltip //
-			let pos = d3.select(this).node().getBoundingClientRect();
-			d3.select('.tooltip-name')
-			.text(d.title)
-			.style('top', pos.top + 'px')
-			.style('left', pos.left + 'px');			
 		})
-		.on("pointerdown",  function (event, d) {
+		.on("mouseover", function (event, d) {
 			// Get Position of Mouse/Node for Tooltip //
 			let pos = d3.select(this).node().getBoundingClientRect();
 			d3.select('.tooltip-name')
-			.text(d.title)
-			.style('display', 'block')
-			d3.select(this).transition().ease(d3.easeSin).duration(400).attr("width", node_width * 3)			
+				.text(d.title)
+				.style('top', pos.top + 'px')
+				.style('left', pos.left + 'px');
 		})
-		.on("pointermove",  function (event, d) {
+		.on("pointerdown", function (event, d) {
 			// Get Position of Mouse/Node for Tooltip //
 			let pos = d3.select(this).node().getBoundingClientRect();
 			d3.select('.tooltip-name')
-			.text(d.title)
-			.transition()
-			.style('top', pos.top + 'px')
-			.style('left', pos.left + 'px');
+				.text(d.title)
+				.style('display', 'block')
+			d3.select(this).transition().ease(d3.easeSin).duration(400).attr("width", node_width * 3)
+		})
+		.on("pointermove", function (event, d) {
+			// Get Position of Mouse/Node for Tooltip //
+			let pos = d3.select(this).node().getBoundingClientRect();
+			d3.select('.tooltip-name')
+				.text(d.title)
+				.transition()
+				.style('top', pos.top + 'px')
+				.style('left', pos.left + 'px');
 		})
 		.on("pointerup", function (event, d) {
 			d3.select(this).transition().ease(d3.easeSin).duration(400).attr("width", node_width);
 			d3.selectAll('.tooltip-name')
-			.style('display', 'none');
+				.style('display', 'none');
 		});
 
 		
