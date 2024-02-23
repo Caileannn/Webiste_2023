@@ -1,7 +1,7 @@
 ---
 title: AI x Body
 year: 2022
-cover_img_path: ./assets/imgs/electronic-image/d_electronic-image.gif
+cover_img_path: ./assets/imgs/ai-x-body/d_ai-x-body.gif
 page_img_path: ./assets/imgs/ai-x-body/d_aixbody.webp
 section: 6
 width: 200
