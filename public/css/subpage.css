@@ -1,0 +1,18 @@
+
+/* CSS file for subpages */
+#content-exit-container {
+	opacity: 100%;
+}
+
+#project-cont {
+	opacity: 1;
+	display: block;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.flex-cont {
+	width: 100%;
+}
