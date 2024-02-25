@@ -4,6 +4,7 @@ import json
 import os
 import argparse
 
+# Reads in markdown file, specified by a given path.
 def read_md_file(md_file_path):
     with open(md_file_path, 'r', encoding="utf-8") as file:
         md_content = file.read()
@@ -136,6 +137,7 @@ def convert_md_to_html(md_content):
     html_content = markdown2.markdown(md_content)
     return html_content
 
+# Handles all of the different content sections in the markdown file.
 def extract_content_sections(md_content):
     sections = re.split(r'\n\s*#\s*(\w+)(.*?)\s*(?=\n\s*#|$)', md_content, flags=re.DOTALL)[1:]
     content_list = []
@@ -186,6 +188,8 @@ def inject_html_into_file(html_file_path, generated_html, injection_marker):
     else:
         print(f"Injection marker '{injection_marker}' not found in the HTML file.")
 
+
+# Removes any content between the two injection points.
 def remove_content_between_tags(html_file_path, flag):
     if (flag == 1):
         start_tag = "<!-- PROJECT START -->"
@@ -200,11 +204,10 @@ def remove_content_between_tags(html_file_path, flag):
     with open(html_file_path, 'r', encoding="utf-8") as file:
         original_html = file.read()
 
-    #print(original_html)
     pattern = re.compile(fr"{re.escape(start_tag)}\s*(.*?)\s*{re.escape(end_tag)}", re.DOTALL)
-    #return pattern.sub('', original_html)
     html_new = pattern.sub(f'{start_tag}\n{end_tag}', original_html)
     updated_html = pattern.sub(fr"{start_tag}\n{injection_point}\n{end_tag}", html_new)
+    
     # Write the updated HTML back to the file
     with open(html_file_path, 'w', encoding="utf-8") as file:
         file.write(updated_html)
@@ -272,37 +275,34 @@ def create_subpage(html, title, subpage):
         file.write(html_updated)
         print(f"created new html file: {cleaned_title}.html")
 
-
-
-
-
 def main():
     # HTML body content (imgs, text, etc.)
     # Parse command-line arguments
     parser = argparse.ArgumentParser(description='Process markdown files.')
     parser.add_argument('--draft', action='store_true', help='Include draft projects')
     args = parser.parse_args()
-
     content_body = f""
     md_dir = "../markdown"
-
     draft_flag = args.draft
 
-    # Clear the existing nodes
+    # Clear the existing json file, to be overwritten
     json_path = "../public/data.json"
     json_data = ''
     with open(json_path, 'r', encoding="utf-8") as json_file:
         json_data = json.load(json_file)
     json_data["nodes"] = []
 
+	# Clear existing injected material
     remove_content_between_tags('../public/index.html', 1)
     remove_content_between_tags('../public/index.html', 2)
 
     html_template = ''
+    # ??
     index_list_template = """<span class="li-padding"></span>"""
 
     # Loop over each .md file
     files = os.listdir(md_dir)
+    # Section count, which sorts in descending order.
     section_index = 0
     for idx, file in enumerate(reversed(files)):
         # Check if it's a file (not a subdirectory)
@@ -323,7 +323,6 @@ def main():
             year = metadata.get('year', '')
             cover_img = metadata.get('page_img_path', '')
             node_img = metadata.get('cover_img_path', '')
-            section = metadata.get('section', '')
             subpage = metadata.get('subpage', '')
             draft = metadata.get('draft', '')
             tags = metadata.get('tags', '')
@@ -384,10 +383,6 @@ def main():
                 html_content = generate_html_template(title, year, content_body, cover_img, finger_position)
                 html_template += html_content
                 create_subpage(html_content, title, subpage)
-                # Writing the HTML template to a file
-                # with open(html_output_path, 'w') as html_file:
-                #     html_file.write(html_template)
-
                 section_index += 1
 
     inject_html_into_file('../public/index.html', html_template, "<!-- INJECTION POINT -->")
