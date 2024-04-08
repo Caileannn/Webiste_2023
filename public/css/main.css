@@ -16,6 +16,12 @@
 	font-display: fallback;
 }
 
+@font-face {
+	font-family: 'emnist';
+	src: url('../assets/fonts/EMNIST.woff') format('woff');
+	font-display: fallback;
+}
+
 * {
 	box-sizing: border-box;
 	padding: 0;
@@ -214,12 +220,13 @@ p {
 	display: flex;
 	flex-direction: column;
 	font-family: 'IBM Plex Sans', sans-serif;
-	font-family: 'Picnic';
+	font-family: 'emnist';
 	/* font-family: "IBM Plex Serif", serif;
   	font-weight: 500;
 	font-style: bold; */
-	font-size: 1.75rem;
+	font-size: 3rem;
 	color: #0066FF;
+	line-height: 2rem;
 }
 
 #content-exit-container {
@@ -622,10 +629,12 @@ a{
     display: none;
     position: absolute;
 	font-size: 4rem;
-	font-family: 'Redacted Reg';
+	font-family: 'emnist';
 	color: #FFC83D;
 	font-weight: 800;
-	pointer-events: none
+	pointer-events: none;
+	line-height: 2rem;
+	text-align: center;
 }
 
 .tooltip-tag {
