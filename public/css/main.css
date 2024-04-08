@@ -635,6 +635,7 @@ a{
 	pointer-events: none;
 	line-height: 2rem;
 	text-align: center;
+	max-width: 500px;
 }
 
 .tooltip-tag {
@@ -839,7 +840,7 @@ a{
 
 	.tooltip-name {
 		
-		font-size: 1.5rem;
+		font-size: 3rem;
 	}
 
 	.project-window {
