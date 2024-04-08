@@ -11,12 +11,6 @@
 }
 
 @font-face {
-	font-family: 'Picnic';
-	src: url('../assets/fonts/PicNic-Regular.woff2') format('woff2');
-	font-display: fallback;
-}
-
-@font-face {
 	font-family: 'emnist';
 	src: url('../assets/fonts/EMNIST.woff') format('woff');
 }
