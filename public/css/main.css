@@ -485,9 +485,9 @@ a{
 }
 
 .project-text-body {
-	font-family: 'IBM Plex Mono', monospace;
+	font-family: 'IBM Plex Sans', sans-serif;
 	font-size: 1.5rem;
-	font-weight: 400;
+	
 	color: black;
 	display: flex;
 	flex-direction: column;
@@ -496,6 +496,7 @@ a{
 
 .text-body {
 	text-align: left;
+	font-weight: 400;
 }
 
 .text-body a{
