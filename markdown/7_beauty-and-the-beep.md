@@ -1,7 +1,7 @@
 ---
 title: Beauty and The Beep
 year: 2024
-cover_img_path: ./assets/imgs/dwelling/d_cover_dwelling_2.gif
+cover_img_path: ./assets/imgs/beep/beep.gif
 page_img_path: ./assets/imgs/beep/d_beep_1.png
 section: 0
 width: 200
