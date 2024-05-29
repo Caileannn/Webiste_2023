@@ -497,10 +497,11 @@ a{
 .text-body {
 	text-align: left;
 	font-weight: 400;
+	line-height: 2;
 }
 
 .text-body a{
-	color: #ff0000;
+	color: #09ff00;
 }
 
 .text-body-arrow {

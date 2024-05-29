@@ -1,11 +1,26 @@
 {
   "nodes": [
     {
-      "title": "Dwelling, 2023",
+      "title": "Beauty and The Beep, 2024",
       "path": "./assets/imgs/dwelling/d_cover_dwelling_2.gif",
       "width": 200,
       "height": 80,
       "section": 0,
+      "tags": [
+        "Reinforcment Learning",
+        " AI",
+        " Unity",
+        " Simulation"
+      ],
+      "strength": 0.01,
+      "subpage": "/beauty-and-the-beep.html"
+    },
+    {
+      "title": "Dwelling, 2023",
+      "path": "./assets/imgs/dwelling/d_cover_dwelling_2.gif",
+      "width": 200,
+      "height": 80,
+      "section": 1,
       "tags": [
         "Unity",
         "Performance"
@@ -18,7 +33,7 @@
       "path": "./assets/imgs/data/d_data-icon.gif",
       "width": 200,
       "height": 80,
-      "section": 1,
+      "section": 2,
       "tags": [
         "Web",
         " ML"
@@ -31,7 +46,7 @@
       "path": "./assets/imgs/ai-x-body/d_ai-x-body.gif",
       "width": 200,
       "height": 80,
-      "section": 2,
+      "section": 3,
       "tags": [
         "AI",
         " Human Pose Estimation"
@@ -44,7 +59,7 @@
       "path": "./assets/imgs/undefined/d_up.gif",
       "width": 200,
       "height": 80,
-      "section": 3,
+      "section": 4,
       "tags": [
         "Web",
         " Creative Coding"
@@ -57,7 +72,7 @@
       "path": "./assets/imgs/latent-mirror/d_latent_cover.gif",
       "width": 200,
       "height": 80,
-      "section": 4,
+      "section": 5,
       "tags": [
         "Performance",
         " AI"
@@ -70,7 +85,7 @@
       "path": "./assets/imgs/omachine/cover.gif",
       "width": 200,
       "height": 80,
-      "section": 5,
+      "section": 6,
       "tags": [
         "Natural Language Processing",
         "Simulation"
@@ -83,7 +98,7 @@
       "path": "./assets/imgs/electronic-image/d_electronic-image.gif",
       "width": 200,
       "height": 80,
-      "section": 6,
+      "section": 7,
       "tags": [
         "Virtualisation",
         " Video Synthesis/Art"
