@@ -49,6 +49,7 @@ body {
 	margin: 0px;
 	backdrop-filter: blur(100px);	
 	overflow: hidden;
+	font-family: 'IBM Plex Mono', monospace;
 }
 
 #container {
@@ -212,13 +213,14 @@ p {
 #flex-cont-url {
 	display: flex;
 	flex-direction: column;
-	font-family: 'IBM Plex Sans', sans-serif;
-	font-family: 'emnist';
+	font-family: 'IBM Plex Mono', monospace;
+	font-style: italic;
 	/* font-family: "IBM Plex Serif", serif;
   	font-weight: 500;
 	font-style: bold; */
-	font-size: 3rem;
+	font-size: 2rem;
 	color: #0066FF;
+	font-weight: 400;
 	line-height: 2rem;
 }
 
@@ -236,14 +238,12 @@ p {
 
 #name-cont {
 	cursor: pointer;
-	font-style: normal;
 	margin-top: 20px;
 	margin-left: 20px;
 }
 
 #about-cont {
 	cursor: pointer;
-	font-style: normal;
 	margin-top: 20px;
 	margin-left: 20px;
 	transform: translate(0%, 0%);
@@ -252,7 +252,6 @@ p {
 
 #index-cont {
 	cursor: pointer;
-	font-style: normal;
 	margin-top: 20px;
 	margin-left: 20px;
 	transform: translate(0%, 0%);
@@ -408,7 +407,7 @@ a{
 
 #emoji-cont {
 	cursor: pointer;
-	font-weight: normal;
+	font-style: normal;
 	margin-top: 20px;
 	margin-left: 20px;
 	display: flex;
@@ -486,9 +485,9 @@ a{
 }
 
 .project-text-body {
-	font-family: 'IBM Plex Sans', sans-serif;
-	font-style: bold;
+	font-family: 'IBM Plex Mono', monospace;
 	font-size: 1.5rem;
+	font-weight: 400;
 	color: black;
 	display: flex;
 	flex-direction: column;
@@ -621,14 +620,15 @@ a{
 	border-radius: 15px;
     display: none;
     position: absolute;
-	font-size: 4rem;
-	font-family: 'emnist';
+	font-size: 2rem;
+	font-family: 'Redacted';
 	color: #FFC83D;
 	font-weight: 800;
 	pointer-events: none;
 	line-height: 2rem;
 	text-align: center;
 	max-width: 500px;
+	letter-spacing: 5px;
 }
 
 .tooltip-tag {
